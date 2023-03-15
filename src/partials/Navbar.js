@@ -1,6 +1,6 @@
 const Navbar = () =>{
     return(
-        <div className="navbar bg-base-100">
+        <div className="navbar">
             <div className="flex-1 pl-3">
                 <a className="btn btn-ghost normal-case text-2xl text-purple-800 font-bold">TexoAi</a>
             </div>
