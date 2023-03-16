@@ -2,7 +2,7 @@
 const DashboardPage = () => {
     return (
         <div>
-            <p className="text-center text-3xl font-bold font-black pt-8">Mahfuzul, So, what exactly did you have in mind?</p>
+            <p className="text-center text-3xl font-bold font-black pt-5">Mahfuzul, So, what exactly did you have in mind?</p>
             <p className="text-center text-xl pt-1">Begin with selecting the content type from the options below.</p>
             <div className="flex justify-center items-center pt-5 ">
                 <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">All</button>
@@ -96,6 +96,21 @@ const DashboardPage = () => {
                     </div>
                 </button>
             </div>
+            <div className="ml-60 pl-56 pt-8 pt-10">
+                <button className="flex items-center w-72 h-20 mr-11 p-4 rounded-md bg-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" className="w-6 h-6 mr-3">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                    </svg>
+                    <div className="flex flex-col">
+                        <p className="font-bold pr-28">Article & Blog</p>
+                        <p className="text-xs pr-1">Write your dream SEO article short time.</p>
+                    </div>
+                </button>
+
+            </div>
+
         </div>
     );
 };
