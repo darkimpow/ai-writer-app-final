@@ -9,23 +9,21 @@
 
 ### Step by step tasks:
 
-- [ ] Meet team members to discuss the overall goal
-- [ ] Clone the main branch repository
-- [ ] Create a feature/all-projects branch
-- [ ] Create a projects folder in src
-- [ ] Create AllProject.js and other components in projects folder
-- [ ] The "HTML/CSS/JS" version in React components
+- [x] Meet team members to discuss the overall goal
+- [x] Clone the main branch repository
+- [x] Create a feature/all-projects branch
+- [x] Create a projects folder in src
+- [x] Create AllProject.js and other components in projects folder
+- [x] The "HTML/CSS/JS" version in React components
 - [ ] Git process
-
-  - feature/all-project
-  - git push feature/all-project
+  - e.g. :
+  - feature/all-projects
+  - git push feature/all-projects
   -
-  - 1- git checkoout -b feature/all-project/main-section
-  - 1b. git checkout feature/all-project && git merge feature/all-project/main-section && git pushfeature/all-project
-  - 2c. git pull feature/all-project
+  - 1a. git checkout -b feature/all-projects/main-section
+  - 1b. git checkout feature/all-projects && git merge feature/all-projects/main-section && git push feature/all-projects
+  - 1c. git pull feature/all-projects
   -
-  - 1c. git pull feature/all-project
-  -
-  - 2- git checkoout -b feature/all-project/sidebar
-  - 2b. git checkout feature/all-project && git merge feature/all-project/sidebar && git pushfeature/all-project
-  - 2c. git pull feature/all-project
+  - 2a. git checkout -b feature/all-projects/sidebar
+  - 2b. git checkout feature/all-projects && git merge feature/all-projects/sidebar && git push feature/all-projects
+  - 2c. git pull feature/all-projects
