@@ -2,19 +2,22 @@
 
 import React from 'react';
 
-import { ProjectMainSection } from './ProjectMainSection.jsx';
+// import { ProjectMainSection } from './ProjectMainSection.jsx';
 import {ProjectSideBar} from "./ProjectSideBar.js";
+import Footer from "../partials/Footer";
+import Navbar from "../partials/Navbar";
+import {ProjectMainSection} from "./ProjectMainSection";
 
 export const AllProjects = () => {
-    //// <Header>
 
     return (
         <div className='flex'>
-            {/*  <Header>  */}
-            <ProjectMainSection />
-            <ProjectSideBar />
+              {/*<Navbar/>*/}
+            {/*<ProjectMainSection />*/}
+            <ProjectMainSection/>
+            {/*<ProjectSideBar />*/}
 
-            {/* <Footer> */}
+             {/*<Footer/>*/}
         </div>
     );
 };

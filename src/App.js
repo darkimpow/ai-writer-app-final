@@ -1,6 +1,6 @@
 import Navbar from "./partials/Navbar";
 import Footer from "./partials/Footer";
-import {AllProjects} from "./projects/AllProjects.js";
+import {AllProjects} from "./projects/AllProjects";
 
 function App() {
   return (

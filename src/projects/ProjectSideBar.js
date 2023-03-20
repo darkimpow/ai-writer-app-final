@@ -1,7 +1,5 @@
 // example:
 import React from 'react';
-////
-////
 
 export const ProjectSideBar = () => {
 //// <Header>
