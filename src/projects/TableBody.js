@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Table(props) {
+function TableBody(props) {
     return (
         <div className={'bg-[#faf9f9]'}>
             {/*title*/}
@@ -331,4 +331,4 @@ function Table(props) {
     );
 }
 
-export default Table;
+export default TableBody;
