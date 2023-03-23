@@ -12,6 +12,7 @@ const MainSection = () => {
                         <p>Light & Dark Theme</p>
                     </div>
                 </div>
+                <button className="bg-blue-900 border-rounded ml-28">Get Started</button>
                 </div>
             {/*<div className="divider lg:divider-horizontal"></div>*/}
             <div className="grid flex-grow w-auto h-48 mr-10">
