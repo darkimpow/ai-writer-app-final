@@ -10,10 +10,10 @@ const HomePageNavBar = () => {
                 </div>
                 <div className="navbar-center">
                     <div>
-                        <a className="btn btn-ghost normal-case font-bold text-indigo-900 text-xl">About Us</a>
+                        <a className="btn btn-ghost normal-case font-bold text-indigo-800 text-xl">About Us</a>
                     </div>
                     <div>
-                        <a className="btn btn-ghost normal-case font-bold text-indigo-900 text-xl">Contact Us</a>
+                        <a className="btn btn-ghost normal-case font-bold text-indigo-800 text-xl">Contact Us</a>
                     </div>
 
                 </div>
