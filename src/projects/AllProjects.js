@@ -7,6 +7,7 @@ import {ProjectSideBar} from "./ProjectSideBar.js";
 import Footer from "../partials/Footer";
 import Navbar from "../partials/Navbar";
 import {ProjectMainSection} from "./ProjectMainSection";
+import Table from "./Table";
 
 export const AllProjects = () => {
 
@@ -14,9 +15,9 @@ export const AllProjects = () => {
         <div className='flex'>
               {/*<Navbar/>*/}
             {/*<ProjectMainSection />*/}
-            <ProjectMainSection/>
+            {/*<ProjectMainSection/>*/}
             {/*<ProjectSideBar />*/}
-
+            {<Table />}
              {/*<Footer/>*/}
         </div>
     );
