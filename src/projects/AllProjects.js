@@ -15,7 +15,7 @@ export const AllProjects = () => {
     return (
         <div className='flex'>
               {/*<Navbar/>*/}
-            {/*tableheader*/}
+            {/*tableHeader*/}
             {/*<ProjectMainSection />*/}
             {/*<ProjectMainSection/>*/}
             {/*<ProjectSideBar />*/}
