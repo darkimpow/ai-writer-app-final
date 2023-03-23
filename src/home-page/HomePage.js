@@ -1,11 +1,14 @@
 import React from 'react';
 import MainSection from "./MainSection";
+import HomePageNavBar from "./HomePageNavBar";
+import HomePageFooter from "./HomePageFooter";
 
 
 const HomePage = () => {
     return (
         <div>
-        <MainSection />
+        <HomePageNavBar />
+        <HomePageFooter />
         </div>
     );
 };
