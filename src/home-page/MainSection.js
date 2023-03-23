@@ -14,7 +14,7 @@ const MainSection = () => {
                 </div>
                 </div>
             {/*<div className="divider lg:divider-horizontal"></div>*/}
-            <div className="grid flex-grow w-96 h-48 mr-10">
+            <div className="grid flex-grow w-auto h-48 mr-10">
                 <img src="https://images.zenhubusercontent.com/5d0bbe785cb256095842948d/2a674407-0fee-4d23-a158-b3c4051d5545" alt=""/>
             </div>
         </div>
