@@ -7,7 +7,8 @@ import {ProjectSideBar} from "./ProjectSideBar.js";
 import Footer from "../partials/Footer";
 import Navbar from "../partials/Navbar";
 import {ProjectMainSection} from "./ProjectMainSection";
-import Table from "./Table";
+import TableBody from "./TableBody";
+import TableHeader from "./TableHeader";
 
 export const AllProjects = () => {
 
@@ -18,7 +19,9 @@ export const AllProjects = () => {
             {/*<ProjectMainSection />*/}
             {/*<ProjectMainSection/>*/}
             {/*<ProjectSideBar />*/}
-            {<Table />}
+            <TableHeader />
+
+            {<TableBody />}
              {/*<Footer/>*/}
         </div>
     );
