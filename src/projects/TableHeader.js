@@ -3,7 +3,7 @@ import React from 'react';
 function TableHeader(props) {
     return (
         <div>
-            Table Header
+            <h2>List of Projects</h2>
         </div>
     );
 }
