@@ -12,10 +12,14 @@ const MainSection = () => {
                         <p>Light & Dark Theme</p>
                     </div>
                 </div>
-                <button className="bg-blue-900 border-rounded ml-28">Get Started</button>
+                <div>
+                    <button className="btn md:btn-md ml-28 bg-blue-900 text-xs">Let's Get Started</button>
+                    {/*<img src="https://cdn4.iconfinder.com/data/icons/outline-arrows-7/24/chevron_small_right-512.png" alt="arrow">*/}
                 </div>
+            </div>
+
             {/*<div className="divider lg:divider-horizontal"></div>*/}
-            <div className="grid flex-grow w-auto h-48 mr-10">
+            <div className="grid flex-grow w-80 h-48 mr-10">
                 <img src="https://images.zenhubusercontent.com/5d0bbe785cb256095842948d/2a674407-0fee-4d23-a158-b3c4051d5545" alt=""/>
             </div>
         </div>

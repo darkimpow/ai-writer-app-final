@@ -1,5 +1,6 @@
 import Navbar from "./partials/Navbar";
 import Footer from "./partials/Footer";
+import MainSection from "./home-page/MainSection";
 
 
 
@@ -9,7 +10,7 @@ function App() {
     <div>
       <Navbar/>
     </div>
-
+    <MainSection />
     <div>
         <Footer/>
     </div>
