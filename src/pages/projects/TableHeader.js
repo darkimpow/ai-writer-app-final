@@ -2,7 +2,7 @@ import React from 'react';
 
 function TableHeader(props) {
     return (
-        <div>
+        <>
             {/*title*/}
             <div>List of Projects</div>
 
@@ -20,7 +20,7 @@ function TableHeader(props) {
                 </select>
             </div>
             </div>
-        </div>
+        </>
     );
 }
 
