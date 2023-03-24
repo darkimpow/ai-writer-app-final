@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from "./logo.png"
+import {Link} from "react-router-dom";
 const HomePageNavBar = () => {
     return (
         <div>
@@ -19,7 +20,10 @@ const HomePageNavBar = () => {
                 </div>
                 <div className="navbar-end">
                     <button>
-                        <a className="btn btn-ghost normal-case font-bold text-indigo-300 text-xl">Sign In</a>
+                        <Link
+                            className="btn btn-ghost normal-case font-bold text-indigo-300 text-xl"
+                            to={'/dashboard/home'}>Sign In</Link>
+
                     </button>
                     <button className="btn btn-ghost ">
                         <div>
