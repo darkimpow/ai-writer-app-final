@@ -1,4 +1,5 @@
 import React from 'react';
+import TableHeader from "./TableHeader";
 
 function TableBody(props) {
     return (
@@ -22,6 +23,7 @@ function TableBody(props) {
             {/*</div>*/}
 
             {/*table*/}
+            <TableHeader />
             <div className="overflow-x-auto flex place-content-center">
                 <table className="table w-full">
                     {/* head */}

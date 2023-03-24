@@ -10,7 +10,7 @@ export const AllProjects = () => {
     return (
         <div className='flex'>
             {/*{<Navbar/>}*/}
-            {<TableHeader />}
+
             {<TableBody />}
             {/*{<Footer/>}*/}
         </div>
