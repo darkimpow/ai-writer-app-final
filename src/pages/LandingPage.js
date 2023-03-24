@@ -5,6 +5,7 @@ function LandingPage() {
         <div className="flex justify-center items-center">
 
             <div className='pb-[550px]'>
+
                 <button
                     className="border-2 rounded-lg font-bold text-purple-800 text-2xl bg-purple-200 flex inline mr-4">
                     <svg
@@ -25,6 +26,14 @@ function LandingPage() {
                 </button>
             </div>
             <div>
+
+                {/*Landing page headlines */}
+                <h1 className="font-bold text-xl pl-32">
+                    Landing Page Headlines
+                </h1>
+                <h2 className='text-lg text-gray-400 pl-32 pb-5'>
+                    Unique and Catchy headlines that are perfect
+                </h2>
                 {/* The form section */}
                 <div className="w-[600px] h-[600px] bg-white shadow-lg rounded-lg  pl-32">
                     <div className="form-control w-full max-w-xs flex flex-col">
@@ -36,12 +45,16 @@ function LandingPage() {
                     </div>
 
                     {/*Language field*/}
-                    <div className="form-control w-full max-w-xs ">
+                    <div className="form-control w-[400px]">
                         <label className="label">
-                            <span className="label-text">Project Name *</span>
+                            <span className="label-text">Language</span>
                         </label>
-                        <input type="text" placeholder="Write your project name"
-                               className="input input-bordered w-[400px] border-2"/>
+                        <select className="select select-bordered">
+                            <option disabled selected>English</option>
+                            <option>Spanish</option>
+                            <option>Chinese</option>
+                            <option>Arabic</option>
+                        </select>
                     </div>
 
                     {/*Product Name input field*/}
