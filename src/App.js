@@ -1,12 +1,12 @@
 import {Route, Routes} from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/home/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import DashboardMainSection from "./pages/DashboardMainSection";
 
 
 
 function App() {
-<
+
     return (
         <Routes>
             <Route path={'/'} element={<HomePage/>}/>
