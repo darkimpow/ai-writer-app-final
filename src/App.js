@@ -12,8 +12,8 @@ function App() {
             {/* Start: Dashboard Routes */}
             <Route path={'/dashboard'} element={<DashboardPage/>}>
                 <Route path={'/dashboard/home'} element={<DashboardMainSection/>}/>
+                <Route path={'/dashboard/projects'} element={<AllProjects/>}/>
             </Route>
-            <Route path={'/projects'} element={<AllProjects/>}/>
 
             {/* End: Dashboard Routes*/}
         </Routes>
