@@ -7,7 +7,7 @@ function LandingPage() {
             <div className='pb-[550px]'>
 
                 <button
-                    className="border-2 rounded-lg font-bold text-purple-800 text-2xl bg-purple-200 flex inline mr-4">
+                    className="border-2 rounded-lg font-bold text-purple-800 text-2xl bg-purple-200 border-purple-800 flex inline mr-4 pr-1">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
