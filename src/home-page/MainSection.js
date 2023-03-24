@@ -13,7 +13,7 @@ const MainSection = () => {
                     </div>
                 </div>
                 <div>
-                    <button className="btn md:btn-md ml-28 bg-blue-900 text-xs">Let's Get Started</button>
+                    <button className="btn md:btn-md ml-28 bg-blue-800 text-xs">Let's Get Started</button>
                     {/*<img src="https://cdn4.iconfinder.com/data/icons/outline-arrows-7/24/chevron_small_right-512.png" alt="arrow">*/}
                 </div>
             </div>
