@@ -3,7 +3,7 @@ import React from 'react';
 function LandingPage() {
     return (
         <div className="flex justify-center items-center">
-            
+
             <div className='pb-[550px]'>
                 <button
                     className="border-2 rounded-lg font-bold text-purple-800 text-2xl bg-purple-200 flex inline mr-4">
@@ -60,6 +60,12 @@ function LandingPage() {
                         </label>
                         <input type="text" placeholder="Write your project name"
                                className="input input-bordered w-[400px] h-[200px] border-2"/>
+                    </div>
+                    <div className='pt-4 pl-2'>
+                        <button
+                            className='justify-center items-center border-2 bg-purple-700 text-white w-96 h-10 rounded-lg'>
+                            Generate
+                        </button>
                     </div>
                 </div>
 
