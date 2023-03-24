@@ -3,6 +3,7 @@ import React from 'react';
 function LandingPage() {
     return (
         <div className="flex justify-center items-center">
+            
             <div className='pb-[550px]'>
                 <button
                     className="border-2 rounded-lg font-bold text-purple-800 text-2xl bg-purple-200 flex inline mr-4">
@@ -31,7 +32,7 @@ function LandingPage() {
                             <span className="label-text">Project Name *</span>
                         </label>
                         <input type="text" placeholder="Write your project name"
-                               className="input input-bordered w-64 border-2"/>
+                               className="input input-bordered w-[400px] border-2"/>
                     </div>
 
                     {/*Language field*/}
@@ -40,7 +41,25 @@ function LandingPage() {
                             <span className="label-text">Project Name *</span>
                         </label>
                         <input type="text" placeholder="Write your project name"
-                               className="input input-bordered w-64 border-2"/>
+                               className="input input-bordered w-[400px] border-2"/>
+                    </div>
+
+                    {/*Product Name input field*/}
+                    <div className="form-control w-full max-w-xs ">
+                        <label className="label">
+                            <span className="label-text">Product Name *</span>
+                        </label>
+                        <input type="text" placeholder="Write your project name"
+                               className="input input-bordered w-[400px] border-2"/>
+                    </div>
+
+                    {/*Short description input field*/}
+                    <div className="form-control w-full max-w-xs ">
+                        <label className="label">
+                            <span className="label-text">Short description *</span>
+                        </label>
+                        <input type="text" placeholder="Write your project name"
+                               className="input input-bordered w-[400px] h-[200px] border-2"/>
                     </div>
                 </div>
 
