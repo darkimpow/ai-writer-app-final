@@ -1,18 +1,14 @@
 //AllProjectsPage
 import React from 'react';
-import TableBody from "./TableBody";
-import TableHeader from "./TableHeader";
-import Navbar from "../../partials/Navbar";
-import Footer from "../../partials/Footer";
+import {TableBody} from "./TableBody";
 
 export const AllProjects = () => {
 
     return (
         <div className='flex'>
-            {/*{<Navbar/>}*/}
 
             {<TableBody />}
-            {/*{<Footer/>}*/}
+
         </div>
     );
 };
