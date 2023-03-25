@@ -2,7 +2,7 @@ import React from 'react';
 
 function TableHeader(props) {
     return (
-        <>
+        <div className={'bg-white'}>
             {/*title*/}
             <div className={'pl-4 pt-4 font-bold'}>List of Projects</div>
 
@@ -32,7 +32,7 @@ function TableHeader(props) {
                     </select>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

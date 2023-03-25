@@ -4,27 +4,27 @@ import TableHeader from "./TableHeader";
 export const TableBody = () => {
 // function TableBody(props) {
     return (
-        <div className={'bg-[#faf9f9]'}>
+        <div className={'bg-[#faf9f9] w-full'}>
 
             {/*!*title - search - filter*/}
             <TableHeader />
 
             {/*table*/}
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto ">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
                     <tr>
-                        <th>
+                        <th className={'bg-[#faf4fe]'}>
                             <label>
                                 <input type="checkbox" className="checkbox checkbox-sm" />
                             </label>
                         </th>
-                        <th>Title</th>
-                        <th>Type</th>
-                        <th>Generation</th>
-                        <th>Modified</th>
-                        <th>
+                        <th className={'bg-[#faf4fe] text-[#9e28f3]'}>Title</th>
+                        <th className={'bg-[#faf4fe] text-[#9e28f3]'}>Type</th>
+                        <th className={'bg-[#faf4fe] text-[#9e28f3]'}>Generation</th>
+                        <th className={'bg-[#faf4fe] text-[#9e28f3]'}>Modified</th>
+                        <th className={'bg-[#faf4fe] text-gray-500'}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                 <path d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
                             </svg>
@@ -40,9 +40,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>Difference Between UX and UI Design</td>
-                        <td>Product Descriptions</td>
+                        <td className={'text-gray-400'}>Product Descriptions</td>
                         <td>10</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 28, 2022
                             </div>
@@ -71,9 +71,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>UX/UI Design</td>
-                        <td>Blog Ideas</td>
+                        <td className={'text-gray-400'}>Blog Ideas</td>
                         <td>05</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 25, 2022
                             </div>
@@ -102,9 +102,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>What is UX/UI Design</td>
-                        <td>Article Generations</td>
+                        <td className={'text-gray-400'}>Article Generations</td>
                         <td>02</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 20, 2022
                             </div>
@@ -133,9 +133,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>Men Joggers</td>
-                        <td>Product Descriptions</td>
+                        <td className={'text-gray-400'}>Product Descriptions</td>
                         <td>10</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 18, 2022
                             </div>
@@ -164,9 +164,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>What is UX/UI Design</td>
-                        <td>Blog Intro</td>
+                        <td className={'text-gray-400'}>Blog Intro</td>
                         <td>05</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 15, 2022
                             </div>
@@ -195,9 +195,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>Web Design</td>
-                        <td>Content Rephrase</td>
+                        <td className={'text-gray-400'}>Content Rephrase</td>
                         <td>10</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 10, 2022
                             </div>
@@ -226,9 +226,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>Difference Between UX and UI Design</td>
-                        <td>Landing Pages Headline</td>
+                        <td className={'text-gray-400'}>Landing Pages Headline</td>
                         <td>08</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 08, 2022
                             </div>
@@ -257,9 +257,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>Men Joggers</td>
-                        <td>Product Descriptions</td>
+                        <td className={'text-gray-400'}>Product Descriptions</td>
                         <td>04</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 05, 2022
                             </div>
@@ -288,9 +288,9 @@ export const TableBody = () => {
                             </label>
                         </th>
                         <td>Difference Between UX and Ul Design</td>
-                        <td>Product Descriptions</td>
+                        <td className={'text-gray-400'}>Product Descriptions</td>
                         <td>0</td>
-                        <td>
+                        <td className={'text-gray-400'}>
                             <div>
                                 February 08, 2022
                             </div>
