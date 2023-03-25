@@ -9,7 +9,7 @@ function TableHeader() {
             {/*search box*/}
             <div className={'flex p-4'}>
 
-                <div className="flex input input-bordered input-sm max-w-xs text-gray-400 pl-2">
+                <div className="flex input rounded input-bordered input-sm max-w-xs text-gray-400 pl-2">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          fill="none"
                          viewBox="0 0 24 24"
@@ -24,7 +24,7 @@ function TableHeader() {
                 </div>
 
                 <div>
-                    <select className="select select-bordered select-sm max-w-xs text-gray-400 font-normal ml-4">
+                    <select className="select rounded select-bordered select-sm max-w-xs text-gray-400 font-normal ml-4">
                         <option disabled selected>Filter by template type</option>
                         <option>Type 1</option>
                         <option>Type 2</option>
