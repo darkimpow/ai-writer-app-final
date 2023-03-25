@@ -10,7 +10,7 @@ export const TableBody = () => {
             <TableHeader />
 
             {/*table*/}
-            <div className="overflow-x-auto flex place-content-center">
+            <div className="overflow-x-auto">
                 <table className="table w-full">
                     {/* head */}
                     <thead>

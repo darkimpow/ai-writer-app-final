@@ -24,7 +24,7 @@ function TableHeader(props) {
                 </div>
 
                 <div>
-                    <select className="select select-bordered select-sm max-w-xs text-gray-300">
+                    <select className="select select-bordered select-sm max-w-xs text-gray-400 font-normal ml-4">
                         <option disabled selected>Filter by template type</option>
                         <option>Type 1</option>
                         <option>Type 2</option>
