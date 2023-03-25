@@ -4,12 +4,12 @@ function TableHeader(props) {
     return (
         <>
             {/*title*/}
-            <div>List of Projects</div>
+            <div className={'pl-4 pt-4 font-bold'}>List of Projects</div>
 
             {/*search box*/}
-            <div className={'flex'}>
+            <div className={'flex p-4'}>
 
-                <div className="flex input input-bordered input-sm max-w-xs">
+                <div className="flex input input-bordered input-sm max-w-xs text-gray-400 pl-2">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          fill="none"
                          viewBox="0 0 24 24"
@@ -26,9 +26,9 @@ function TableHeader(props) {
                 <div>
                     <select className="select select-bordered select-sm max-w-xs text-gray-300">
                         <option disabled selected>Filter by template type</option>
-                        <option>Small Apple</option>
-                        <option>Small Orange</option>
-                        <option>Small Tomato</option>
+                        <option>Type 1</option>
+                        <option>Type 2</option>
+                        <option>Type 3</option>
                     </select>
                 </div>
             </div>
