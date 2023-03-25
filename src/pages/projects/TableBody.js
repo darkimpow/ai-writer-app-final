@@ -2,7 +2,6 @@ import React from 'react';
 import TableHeader from "./TableHeader";
 
 export const TableBody = () => {
-// function TableBody(props) {
     return (
         <div className={'bg-[#faf9f9] w-full'}>
 
@@ -320,5 +319,3 @@ export const TableBody = () => {
         </div>
     );
 }
-
-// export default TableBody;
