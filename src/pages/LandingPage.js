@@ -35,7 +35,7 @@ function LandingPage() {
                     Unique and Catchy headlines that are perfect
                 </h2>
                 {/* The form section */}
-                <div className="w-[600px] h-[600px] bg-white shadow-lg rounded-lg  pl-32">
+                <div className="w-[600px] h-[550px] bg-white shadow-2xl rounded-lg  pl-32">
                     <div className="form-control w-full max-w-xs flex flex-col">
                         <label className="label">
                             <span className="label-text">Project Name *</span>
@@ -62,7 +62,7 @@ function LandingPage() {
                         <label className="label">
                             <span className="label-text">Product Name *</span>
                         </label>
-                        <input type="text" placeholder="Write your project name"
+                        <input type="text" placeholder="Write your product name"
                                className="input input-bordered w-[400px] border-2"/>
                     </div>
 
