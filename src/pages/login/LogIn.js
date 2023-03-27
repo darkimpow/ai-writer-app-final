@@ -8,6 +8,7 @@ const LogIn = () => {
     const passwordRef = useRef();
     const forgetPasswordRef= useRef();
     const rememberMeRef= useRef();
+    const gmailMeRef= useRef();
 
     const handleLogin=(e)=>{
         e.preventDefault();
@@ -29,7 +30,7 @@ const LogIn = () => {
                                     <h1 className="justify-left text-sm text-gray-400" >Have we meet before?</h1>
                                 </div>
                                 <br/>
-                                <button className=" flex justify-center text-black font-bold border-2 rounded-lg py-2 border-b-gray-300 gap-2">
+                                <button className=" flex justify-center text-black font-bold border-2 rounded-lg py-2 border-b-gray-300 gap-2" ref={gmailMeRef}>
                                     <img className="w-6 h-6" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"/>
                                     Sign in with Google
                                 </button>
