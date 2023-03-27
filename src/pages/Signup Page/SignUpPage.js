@@ -5,22 +5,23 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const SignUpPage = () => {
     return (
+
         <div className="hero min-h-screen bg-base-200">
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="card-body">
                     <div className="form-control">
 
-                                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                                <h2 className='font-bold'> Start for free Today </h2>
+                                <h1 className='font-bold'> Start for free Today </h1><span
+                                    className="EKtkFWMYpwzMKOYr0GYm LQVY1Jpkk8nyJ6HBWKAk"> 👏 </span>
+                                </div>
+
                                     <p className='text-xs'> Access to all features. No credit card required. </p>
                                     <form onSubmit={ handler } className='input input-bordered'>
-                                        <div className='flex justify-center justify-evenly'>
-                                            <FontAwesomeIcon icon={faGoogle}/>
-                                                <a href="#">
-                                                    <i className=" fa fa-google fa-fw "></i>
-                                                    <p> Sign up with Google </p>
-                                                </a>
-                                        </div>
+                                        <button className=" flex justify-center text-black font-bold border-2 rounded-lg py-2 border-b-gray-300 gap-2">
+                                            <img className="w-6 h-6" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"/>
+                                            Sign in with Google
+                                        </button>
                                     </form>
                                     <div className='divider'>
                                         <p className='text-xs'> Or continue with </p>
@@ -42,7 +43,6 @@ const SignUpPage = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 }
 
