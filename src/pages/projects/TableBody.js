@@ -19,11 +19,11 @@ export const TableBody = () => {
                                 <input type="checkbox" className="checkbox checkbox-sm" />
                             </label>
                         </th>
-                        <th className={'bg-[#faf4fe] text-[#9e28f3]'}>Title</th>
-                        <th className={'bg-[#faf4fe] text-[#9e28f3]'}>Type</th>
-                        <th className={'bg-[#faf4fe] text-[#9e28f3]'}>Generation</th>
-                        <th className={'bg-[#faf4fe] text-[#9e28f3]'}>Modified</th>
-                        <th className={'bg-[#faf4fe] text-gray-500'}>
+                        <th className={'bg-[#faf4fe] text-[#9e28f3] normal-case text-base font-normal'}>Title</th>
+                        <th className={'bg-[#faf4fe] text-[#9e28f3] normal-case text-base font-normal'}>Type</th>
+                        <th className={'bg-[#faf4fe] text-[#9e28f3] normal-case text-base font-normal'}>Generation</th>
+                        <th className={'bg-[#faf4fe] text-[#9e28f3] normal-case text-base font-normal'}>Modified</th>
+                        <th className={'bg-[#faf4fe] text-gray-500 normal-case'}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                 <path d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
                             </svg>
@@ -50,7 +50,7 @@ export const TableBody = () => {
                             </div>
                         </td>
                         <td className={'flex flex-row'}>
-                            <div>
+                            <div className={'w-4 h-12 bg-blue-300'}>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#216bfe" className="w-4 h-12">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
                                 </svg>
