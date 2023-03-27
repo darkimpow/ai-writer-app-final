@@ -9,8 +9,6 @@ const DashboardPage = () => {
     const [loggedIn, setLoggedIn] = useState(true);
 
     const navigate = useNavigate();
-
-    {/*
     useEffect(() => {
 
         const checkUserLoggedIn = () => {
@@ -19,11 +17,8 @@ const DashboardPage = () => {
 
         //sends user to the Dashboard home page when logged in
         checkUserLoggedIn();
-
     }, [])
     ;
-*/
-    }
 
     return (
         <div>
