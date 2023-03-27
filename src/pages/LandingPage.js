@@ -45,6 +45,7 @@ function LandingPage() {
                                className="input input-bordered w-[400px] border-2"/>
                     </div>
 
+
                     {/*Language field*/}
                     <div className="form-control w-[400px]">
                         <label className="label">
