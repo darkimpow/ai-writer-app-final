@@ -22,7 +22,7 @@ function App() {
             </Route>
             {/* End: Dashboard Routes*/}
         </Routes>
-    );R
+    );
 
 }
 
