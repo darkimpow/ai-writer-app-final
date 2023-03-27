@@ -23,6 +23,7 @@ function TableHeader() {
                     <input type="text" placeholder="Search for a file"/>
                 </div>
 
+                {/*filter*/}
                 <div>
                     <select className="select rounded select-bordered select-sm max-w-xs text-gray-400 font-normal ml-4">
                         <option disabled selected>Filter by template type</option>

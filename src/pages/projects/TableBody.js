@@ -5,7 +5,7 @@ export const TableBody = () => {
     return (
         <div className={'bg-[#faf9f9] w-full'}>
 
-            {/*!*title - search - filter*/}
+            {/*title - search - filter*/}
             <TableHeader />
 
             {/*table*/}
