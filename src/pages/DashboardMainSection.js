@@ -15,10 +15,6 @@ const DashboardMainSection = () => {
             <div className="flex justify-center items-center pt-5 ">
                 <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">All</button>
                 <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">Article & Blog</button>
-                <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">Social Media</button>
-                <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">Writing</button>
-                <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">Keyword Research</button>
-                <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">Ecommerce</button>
                 <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">Website</button>
             </div>
             <div className="ml-48 pl-72 pt-8 pb-3 font-bold">
