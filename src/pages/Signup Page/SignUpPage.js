@@ -1,8 +1,6 @@
 import React, {useRef} from 'react';
-import {handleOnSubmit} from "daisyui";
-import {faGoogle} from '@fortawesome/free-brands-svg-icons'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useSubmit} from "react-router-dom";
+
+import GoogleButton from "../../component/GoogleButton";
 
 
 
@@ -15,7 +13,8 @@ const SignUpPage = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
     const rePasswordRef = useRef();
-    const handleSubmit = (e) => {
+    const gmailMeRef = useRef();
+    const handleSignUp = (e) => {
         e.preventDefault();
         console.log(e);
     }
@@ -34,12 +33,11 @@ const SignUpPage = () => {
                         </div>
 
                                     <p className='text-xs'> Access to all features. No credit card required. </p>
-                                    <form onSubmit={ handleSubmit } className='input input-bordered'>
-                                        <button className=" flex justify-items-center text-black font-bold  rounded-lg py-2 border-b-gray-300 gap-2">
-                                            <img className="w-6 h-6" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"/>
-                                            Sign in with Google
-                                        </button>
-                                    </form>
+                                <GoogleButton/>
+                        <form onSubmit={ handleSignUp } >
+
+
+
                                     <div className='divider'>
                                         <p className='text-xs'> Or continue with </p>
                                     </div>
@@ -67,10 +65,12 @@ const SignUpPage = () => {
                                         </svg>
                                     </div>
                                     </div>
+
                                     <div className="form-control mt-6">
-                                 <button className="btn btn-primary bg-blend-color"> Sign Up </button>
+                                 <button className="btn btn-primary bg-purple-600"> Sign Up </button>
                                 <p className='text-xs'> Already have an account? <strong> Sign In </strong></p>
                             </div>
+                        </form>
                         </div>
                     </div>
                 </div>
