@@ -18,9 +18,9 @@ function App() {
         <Routes>
             <Route path={'/'} element={<HomePage/>}/>
             <Route path={'/login'} element={<LogIn/>}/>
-            <Route path={'/new_password'} element={<NewPassword/>}/>
-            <Route path={'/password_success'} element={<PasswordSuccess/>}/>
-            <Route path={'/forgot_password'} element={<ForgotPassword/>}/>
+            <Route path={'/new-password'} element={<NewPassword/>}/>
+            <Route path={'/password-success'} element={<PasswordSuccess/>}/>
+            <Route path={'/forgot-password'} element={<ForgotPassword/>}/>
 
 
             {/* Start: Dashboard Routes */}
