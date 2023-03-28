@@ -42,9 +42,9 @@ const SignUpPage = () => {
                                         <p className='text-xs'> Or continue with </p>
                                     </div>
                                     <h3>Full Name*</h3>
-                                    <input ref={fullNameRef} type='text' placeholder=' Sajib Rahman' className="input input-bordered"/>
+                                    <input ref={fullNameRef} type='text' placeholder=' Sajib Rahman' className="input input-bordered w-full"/>
                                     <h3>Email*</h3>
-                                        <input ref={emailRef} type="text" placeholder="Email" className="input input-bordered" />
+                                        <input ref={emailRef} type="text" placeholder="Email" className="input input-bordered w-full" />
 
                                     <h3>Password*</h3>
                                 <div className=" flex input input-bordered">
