@@ -16,7 +16,11 @@ const SignUpPage = () => {
     const gmailMeRef = useRef();
     const handleSignUp = (e) => {
         e.preventDefault();
-        console.log(e);
+        // console.log(fullNameRef.current.value);
+        // console.log(emailRef.current.value);
+        // console.log(passwordRef.current.value);
+        // console.log(rePasswordRef.current.value);
+
     }
 
     return (

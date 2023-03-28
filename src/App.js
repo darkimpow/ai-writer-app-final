@@ -2,6 +2,7 @@ import {Route, Routes} from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import DashboardMainSection from "./pages/DashboardMainSection";
+import SignUpPage from "./pages/Signup Page/SignUpPage";
 
 
 
@@ -11,6 +12,7 @@ function App() {
     return (
         <Routes>
             <Route path={'/'} element={<HomePage/>}/>
+            <Route path={'/signup'} element={<SignUpPage/>}/>
 
             {/* Start: Dashboard Routes */}
             <Route path={'/dashboard'} element={<DashboardPage/>}>
