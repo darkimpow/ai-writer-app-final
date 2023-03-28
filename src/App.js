@@ -2,7 +2,6 @@ import {Route, Routes} from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import DashboardMainSection from "./pages/DashboardMainSection";
-<<<<<<< HEAD
 import LogIn from "./pages/login/LogIn";
 import NewPassword from "./pages/login/NewPassword";
 import PasswordSuccess from "./pages/login/PasswordSuccess";
