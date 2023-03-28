@@ -2,7 +2,6 @@ import {Route, Routes} from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import DashboardMainSection from "./pages/DashboardMainSection";
-import SignUpPage from "./pages/Signup Page/SignUpPage";
 
 
 
@@ -11,9 +10,6 @@ function App() {
 
     return (
         <Routes>
-            {/* Start: Signup Page Route */}
-            <Route path={'/signup'} element={<SignUpPage/>}/>
-            {/* End: Signup Page Route */}
             <Route path={'/'} element={<HomePage/>}/>
 
             {/* Start: Dashboard Routes */}
