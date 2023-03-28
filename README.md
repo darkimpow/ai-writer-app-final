@@ -6,12 +6,10 @@ This project will be bootstrapped with Tailwind.CSS, GitHub will be used for sou
 
 ---
 
-### As a user I can see the “All Projects” page
+### All project section (@AmirhosseinOlyaei)
+Create a web page called "All Projects" using the React.js framework, to display a list of all generated projects in a visually appealing and easy-to-navigate manner. It will provide users with a clear and concise overview of all projects, allowing them to easily find and select the project they are working on.
 
->#### Description:
->- Create a web page called "All Projects" using the React.js framework, to display a list of all generated projects in a visually appealing and easy-to-navigate manner. It will provide users with a clear and concise overview of all projects, allowing them to easily find and select the project they are working on.
->
->Issue #51
+Issue #51
 
 ---
 
