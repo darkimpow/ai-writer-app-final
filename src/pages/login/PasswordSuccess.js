@@ -1,11 +1,13 @@
 import React from 'react';
 
-const handleLogin=(e)=>{
-    e.preventDefault();
-    console.log(e);
-}
 
 const PasswordSuccess = () => {
+
+    const handleLogin=(e)=>{
+        e.preventDefault();
+        console.log(e);
+    }
+
 
     return (
         <div>

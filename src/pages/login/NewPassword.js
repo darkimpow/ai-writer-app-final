@@ -1,5 +1,7 @@
 import React from 'react';
-import {ResendEmail} from './ResendEmail'
+import {ResendEmail} from '../../component/ResendEmail'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faLockOpen} from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -20,8 +22,9 @@ const NewPassword = () => {
                         <div className="card-body p-4">
                             <div className="form-control">
                                 <div className="flex" >
-                                    <img className="w-12 h-12 pr-2" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Logo_semi-protecion_jaune.svg" />
-                                    <div>
+
+                                    <FontAwesomeIcon className="w-12 h-12 bg-amber-300 " icon={faLockOpen} />
+                                    <div className="pl-2">
                                         <h1 className="justify-left font-bold text-2xl" >Create New Password</h1>
 
                                         <h1 className="justify-left text-sm text-gray-400" >Enter a new password for login your account</h1>

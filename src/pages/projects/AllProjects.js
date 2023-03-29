@@ -7,7 +7,7 @@ export const AllProjects = () => {
     return (
         <div className='flex'>
 
-            {<TableBody />}
+            {<TableBody/>}
 
         </div>
     );

@@ -62,7 +62,7 @@ const LogIn = () => {
                                         <input type="checkbox"  className="checkbox-xm" ref={rememberMeRef}/>
                                         <span className="label-text text-gray-400">Remember me</span>
                                     </div>
-                                    <Link to={'/forgot_password'} className="text-sm text-warning" ref={forgetPasswordRef}>Forget your password?</Link>
+                                    <Link to={'/forgot-password'} className="text-sm text-warning" ref={forgetPasswordRef}>Forget your password?</Link>
                                 </div>
                             </div>
                             <div className="form-control mt-2">
