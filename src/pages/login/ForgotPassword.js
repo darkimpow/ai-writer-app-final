@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {ResendEmail} from '../../component/ResendEmail'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLockOpen} from '@fortawesome/free-solid-svg-icons'
+import {Link} from "react-router-dom";
 
 
 
@@ -50,7 +51,7 @@ const ForgotPassword = () => {
                                 <button type="submit" className="py-2 rounded-lg border-2 bg-purple-600 text-sm text-white">Reset Password</button>
                             </div>
                             <div className="flex justify-center text-sm" >
-                                <Link to={} className=" text-warning" >Resend email</Link>
+                                <Link to={""} className=" text-warning" >Resend email</Link>
 
                             </div>
                         </div>

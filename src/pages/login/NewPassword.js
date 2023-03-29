@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {ResendEmail} from '../../component/ResendEmail'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLockOpen} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 
 
@@ -64,7 +65,7 @@ const NewPassword = () => {
                                 <button type="submit" className="py-2 rounded-lg border-2 bg-purple-600 text-sm text-white">Confirm Password</button>
                             </div>
                             <div className="flex justify-center text-sm" >
-                                <Link to={} className=" text-warning" >Resend email</Link>
+                                <Link to={""} className=" text-warning" >Resend email</Link>
 
                             </div>
 
