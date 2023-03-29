@@ -3,7 +3,7 @@ import HomePage from "./pages/home/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import DashboardMainSection from "./pages/DashboardMainSection";
 import SignUpPage from "./pages/Signup Page/SignUpPage";
-
+import {AllProjects} from "./pages/projects/AllProjects";
 
 
 
@@ -13,7 +13,7 @@ function App() {
         <Routes>
             <Route path={'/'} element={<HomePage/>}/>
             <Route path={'/signup'} element={<SignUpPage/>}/>
-
+            <Route path={'/dashboard/projects'} element={<AllProjects/>}/>
             {/* Start: Dashboard Routes */}
             <Route path={'/dashboard'} element={<DashboardPage/>}>
                 <Route path={'/dashboard/home'} element={<DashboardMainSection/>}/>
