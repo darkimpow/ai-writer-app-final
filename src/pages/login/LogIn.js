@@ -12,7 +12,11 @@ const LogIn = () => {
 
     const handleLogin=(e)=>{
         e.preventDefault();
-        console.log(e);
+        console.log(emailRef.current.value);
+        console.log(passwordRef.current.value);
+        console.log(forgetPasswordRef.current.value);
+        console.log(rememberMeRef.current.value);
+        console.log(gmailMeRef.current.value);
     }
 
     return (

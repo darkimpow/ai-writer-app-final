@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {ResendEmail} from '../../component/ResendEmail'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLockOpen} from "@fortawesome/free-solid-svg-icons";
@@ -6,9 +6,13 @@ import {faLockOpen} from "@fortawesome/free-solid-svg-icons";
 
 
 const NewPassword = () => {
+
+    const newPasswordRef = useRef();
+    const confirmPasswordRef = useRef();
     const handleLogin=(e)=>{
         e.preventDefault();
-        console.log(e);
+        console.log(newPasswordRef.current.value);
+        console.log(confirmPasswordRef.current.value);
     }
 
 
