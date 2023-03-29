@@ -50,7 +50,7 @@ const ForgotPassword = () => {
                                 <button type="submit" className="py-2 rounded-lg border-2 bg-purple-600 text-sm text-white">Reset Password</button>
                             </div>
                             <div className="flex justify-center text-sm" >
-                                <h1 className=" text-warning" >Resend email</h1>
+                                <Link to={} className=" text-warning" >Resend email</Link>
 
                             </div>
                         </div>
