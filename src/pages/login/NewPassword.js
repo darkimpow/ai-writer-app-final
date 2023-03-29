@@ -44,7 +44,7 @@ const NewPassword = () => {
                                     <span className="label-text font-bold">New Password*</span>
                                 </label>
                                 <div className="flex justify-between p-2  border border-gray-300 rounded-lg" >
-                                    <input type="password" placeholder="New Password" className="border-transparent rounded-lg outline-white border-solid border-2"/>
+                                    <input type="password" placeholder="New Password" className="border-transparent rounded-lg outline-white border-solid border-2" ref={newPasswordRef}/>
                                     <span><img className="w-6 h-6 " src="https://cdn3.iconfinder.com/data/icons/modifiers-essential/48/v-19-512.png" /></span>
                                 </div>
 
@@ -53,7 +53,7 @@ const NewPassword = () => {
                                     <span className="label-text font-bold">Confirm Password*</span>
                                 </label>
                                 <div className="flex justify-between p-2  border border-gray-300 rounded-lg" >
-                                    <input type="password" placeholder="Confirm Password" className="border-transparent rounded-lg outline-white border-solid border-2"/>
+                                    <input type="password" placeholder="Confirm Password" className="border-transparent rounded-lg outline-white border-solid border-2" ref={confirmPasswordRef}/>
                                     <span><img className="w-6 h-6 " src="https://cdn3.iconfinder.com/data/icons/modifiers-essential/48/v-19-512.png" /></span>
                                 </div>
 
