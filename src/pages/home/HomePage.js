@@ -4,12 +4,15 @@ import HomePageNavBar from "./HomePageNavBar";
 import HomePageFooter from "./HomePageFooter";
 
 
-const HomePage = () => {
+
+const HomePage = (item) => {
     return (
         <div>
         <HomePageNavBar />
         <MainSection/>
         <HomePageFooter />
+
+
         </div>
     );
 };
