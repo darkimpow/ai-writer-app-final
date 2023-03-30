@@ -27,7 +27,7 @@ const HomePageNavBar = () => {
                     </button>
                     <button className="btn btn-ghost ">
                         <div>
-                            <a className="btn btn-ghost normal-case font-bold bg-blue-900 text-white text-xl">Sign Up</a>
+                            <Link to={'/signup'} className="btn btn-ghost normal-case font-bold bg-blue-900 text-white text-xl">Sign Up</Link>
                         </div>
                     </button>
                 </div>
