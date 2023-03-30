@@ -8,6 +8,7 @@ import PasswordSuccess from "./pages/login/PasswordSuccess";
 import ForgotPassword from "./pages/login/ForgotPassword";
 import SignUpPage from "./pages/Signup Page/SignUpPage";
 import {AllProjects} from "./pages/projects/AllProjects";
+import LandingPage from "./pages/LandingPage";
 
 
 
@@ -30,6 +31,8 @@ function App() {
 
             <Route path={'/signup'} element={<SignUpPage/>}/>
             <Route path={'/dashboard/projects'} element={<AllProjects/>}/>
+            <Route path={'/land-page'} element={<LandingPage/>}/>
+
 
             {/* Start: Dashboard Routes */}
             <Route path={'/dashboard'} element={<DashboardPage/>}>
