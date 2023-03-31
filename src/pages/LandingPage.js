@@ -1,6 +1,32 @@
-import React from 'react';
-
+import React,{useRef} from 'react';
+import {createClient} from '@supabase/supabase-js'
 function LandingPage() {
+    {/*This is where the functions will begin */}
+    {/*Helper libs */}
+
+    const projectRef =useRef();
+    const productRef =useRef();
+    const descriptionRef =useRef();
+
+{/*user events*/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="flex justify-center items-center">
 
