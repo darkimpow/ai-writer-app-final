@@ -15,7 +15,7 @@ const handleArticle = async e => {
     console.log(`${projectRef.current.value},${productRef.current.value},${descriptionRef.current.value}`)
 
 
-    const  { error } = await supabase.from('')
+    const  { error } = await supabase.from('LandingPage')
         .from('countries')
         .insert({ id: 1, name: 'Denmark' })
 
