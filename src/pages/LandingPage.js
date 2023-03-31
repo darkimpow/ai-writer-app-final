@@ -8,6 +8,7 @@ function LandingPage() {
     const productRef =useRef();
     const descriptionRef =useRef();
 
+
 {/*user events*/}
 
 const handleArticle = async e => {
