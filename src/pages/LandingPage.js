@@ -61,7 +61,12 @@ function LandingPage() {
                 <h2 className='text-lg text-gray-400 pl-32 pb-5'>
                     Unique and Catchy headlines that are perfect
                 </h2>
+
+
                 {/* The form section */}
+                {/* This form will need a submit function inserted here*/}
+
+            <form onSubmit={}>
                 <div className="w-[600px] h-[550px] bg-white shadow-2xl rounded-lg  pl-32">
                     <div className="form-control w-full max-w-xs flex flex-col">
                         <label className="label">
@@ -109,7 +114,7 @@ function LandingPage() {
                         </button>
                     </div>
                 </div>
-
+            </form>
             </div>
         </div>
     );
