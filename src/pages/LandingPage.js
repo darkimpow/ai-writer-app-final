@@ -10,7 +10,16 @@ function LandingPage() {
 
 {/*user events*/}
 
+const handleArticle = async e => {
+    e.preventDefault();
+    console.log(`${projectRef.current.value},${productRef.current.value},${descriptionRef.current.value}`)
 
+
+    const  { error } = await supabase.from('')
+        .from('countries')
+        .insert({ id: 1, name: 'Denmark' })
+
+}
 
 
 
