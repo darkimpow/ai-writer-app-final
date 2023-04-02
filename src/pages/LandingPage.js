@@ -1,40 +1,54 @@
-import React,{useRef} from 'react';
+import React, {useRef} from 'react';
 import {createClient} from '@supabase/supabase-js'
+import {supabase} from "../supabase";
+
 function LandingPage() {
-    {/*This is where the functions will begin */}
-    {/*Helper libs */}
+    const projectNameRef = useRef(null);
+    const languageRef = useRef(null);
+    const productNameRef = useRef(null);
+    const shortDescriptionRef = useRef(null);
+    const setGeneratedTextRef = useRef(null);
 
-    const projectRef =useRef();
-    const productRef =useRef();
-    const descriptionRef =useRef();
+    const handleForm = async (e) => {
+        e.preventDefault();
+
+        // Call the ChatGPT API here to generate the response based on the form data
+        const response = await fetch("https://api.openai.com/v1/engine/<engine_id>/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+            },
+            body: JSON.stringify({
+                prompt: `${projectNameRef.current.value}, ${productNameRef.current.value}, ${shortDescriptionRef.current.value}, ${languageRef.current.value}`,
+            }),
+        });
+        const data = await response.json();
+        //data.choices[0].text is accessing the first object in the choices array (which should be the only object in the array),
+        // and then getting the text property of that object. This results in the generated text that was returned by the API call.
+        const text = data.choices[0].text;
+        <div ref={setGeneratedTextRef}></div>
+
+        // Insert the generated text into your Supabase database
+        const {data: insertedData, error} = await supabase
+            .from("generated_text")
+            .insert([{
+                project_name: projectName,
+                language,
+                product_name: productName,
+                short_description,
+                generated_text: text
+            }]);
+
+        // Handle any errors
+        if (error) {
+            console.error(error);
+            return;
+        }
 
 
-{/*user events*/}
-
-const handleArticle = async e => {
-    e.preventDefault();
-    console.log(`${projectRef.current.value},${productRef.current.value},${descriptionRef.current.value}`)
-
-
-    const  { error } = await supabase.from('LandingPage')
-        .from('countries')
-        .insert({ id: 1, name: 'Denmark' })
-
+    };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     return (
@@ -76,55 +90,55 @@ const handleArticle = async e => {
                 {/* The form section */}
                 {/* This form will need a submit function inserted here*/}
 
-            <form onSubmit={}>
-                <div className="w-[600px] h-[550px] bg-white shadow-2xl rounded-lg  pl-32">
-                    <div className="form-control w-full max-w-xs flex flex-col">
-                        <label className="label">
-                            <span className="label-text">Project Name *</span>
-                        </label>
-                        <input type="text" placeholder="Write your project name"
-                               className="input input-bordered w-[400px] border-2"/>
-                    </div>
+                <form onSubmit={handleForm}>
+                    <div className="w-[600px] h-[550px] bg-white shadow-2xl rounded-lg  pl-32">
+                        <div className="form-control w-full max-w-xs flex flex-col">
+                            <label className="label">
+                                <span className="label-text">Project Name *</span>
+                            </label>
+                            <input type="text" placeholder="Write your project name" ref={projectNameRef}
+                                   className="input input-bordered w-[400px] border-2"/>
+                        </div>
 
 
-                    {/*Language field*/}
-                    <div className="form-control w-[400px]">
-                        <label className="label">
-                            <span className="label-text">Language</span>
-                        </label>
-                        <select className="select select-bordered">
-                            <option disabled selected>English</option>
-                            <option>Spanish</option>
-                            <option>Chinese</option>
-                            <option>Arabic</option>
-                        </select>
-                    </div>
+                        {/*Language field*/}
+                        <div className="form-control w-[400px]">
+                            <label className="label">
+                                <span className="label-text">Language</span>
+                            </label>
+                            <select className="select select-bordered">
+                                <option disabled selected>English</option>
+                                <option>Spanish</option>
+                                <option>Chinese</option>
+                                <option>Arabic</option>
+                            </select>
+                        </div>
 
-                    {/*Product Name input field*/}
-                    <div className="form-control w-full max-w-xs ">
-                        <label className="label">
-                            <span className="label-text">Product Name *</span>
-                        </label>
-                        <input type="text" placeholder="Write your product name"
-                               className="input input-bordered w-[400px] border-2"/>
-                    </div>
+                        {/*Product Name input field*/}
+                        <div className="form-control w-full max-w-xs ">
+                            <label className="label">
+                                <span className="label-text">Product Name *</span>
+                            </label>
+                            <input type="text" placeholder="Write your product name"
+                                   className="input input-bordered w-[400px] border-2"/>
+                        </div>
 
-                    {/*Short description input field*/}
-                    <div className="form-control w-full max-w-xs ">
-                        <label className="label">
-                            <span className="label-text">Short description *</span>
-                        </label>
-                        <input type="text" placeholder="Write your project name"
-                               className="input input-bordered w-[400px] h-[200px] border-2"/>
+                        {/*Short description input field*/}
+                        <div className="form-control w-full max-w-xs ">
+                            <label className="label">
+                                <span className="label-text">Short description *</span>
+                            </label>
+                            <input type="text" placeholder="Write your project name"
+                                   className="input input-bordered w-[400px] h-[200px] border-2"/>
+                        </div>
+                        <div className='pt-4 pl-2'>
+                            <button
+                                className='justify-center items-center border-2 bg-purple-700 text-white w-96 h-10 rounded-lg'>
+                                Generate
+                            </button>
+                        </div>
                     </div>
-                    <div className='pt-4 pl-2'>
-                        <button
-                            className='justify-center items-center border-2 bg-purple-700 text-white w-96 h-10 rounded-lg'>
-                            Generate
-                        </button>
-                    </div>
-                </div>
-            </form>
+                </form>
             </div>
         </div>
     );
