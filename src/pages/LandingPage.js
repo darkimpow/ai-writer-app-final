@@ -35,8 +35,9 @@ function LandingPage() {
         // Insert the generated text into your Supa_base database
         //The code is creating an object with properties for the project name, product name, short description,
         // and the generated text, and then using the Supa_base client to insert that object as a new row in the "generated_text" table.
-        const {data: insertedData, error} = await supabase
-            .from("generated_text")
+        const getAllResults = async () => {
+        const {data: formResults, error} = await supabase
+            .from('formResults')
             .insert([
                 {
                     project_name: projectNameRef.current.value,
