@@ -16,7 +16,7 @@ function LandingPage() {
         e.preventDefault();
 
         // Call the ChatGPT API here to generate the response based on the form data
-        const response = await fetch("https://api.openai.com/v1/engine/<engine_id>/completions", {
+        const response = await fetch("https://api.openai.com/v1/engine/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
