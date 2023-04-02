@@ -1,6 +1,42 @@
-import React from 'react';
-
+import React,{useRef} from 'react';
+import {createClient} from '@supabase/supabase-js'
 function LandingPage() {
+    {/*This is where the functions will begin */}
+    {/*Helper libs */}
+
+    const projectRef =useRef();
+    const productRef =useRef();
+    const descriptionRef =useRef();
+
+
+{/*user events*/}
+
+const handleArticle = async e => {
+    e.preventDefault();
+    console.log(`${projectRef.current.value},${productRef.current.value},${descriptionRef.current.value}`)
+
+
+    const  { error } = await supabase.from('LandingPage')
+        .from('countries')
+        .insert({ id: 1, name: 'Denmark' })
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="flex justify-center items-center">
 
@@ -35,7 +71,12 @@ function LandingPage() {
                 <h2 className='text-lg text-gray-400 pl-32 pb-5'>
                     Unique and Catchy headlines that are perfect
                 </h2>
+
+
                 {/* The form section */}
+                {/* This form will need a submit function inserted here*/}
+
+            <form onSubmit={}>
                 <div className="w-[600px] h-[550px] bg-white shadow-2xl rounded-lg  pl-32">
                     <div className="form-control w-full max-w-xs flex flex-col">
                         <label className="label">
@@ -44,6 +85,7 @@ function LandingPage() {
                         <input type="text" placeholder="Write your project name"
                                className="input input-bordered w-[400px] border-2"/>
                     </div>
+
 
                     {/*Language field*/}
                     <div className="form-control w-[400px]">
@@ -82,7 +124,7 @@ function LandingPage() {
                         </button>
                     </div>
                 </div>
-
+            </form>
             </div>
         </div>
     );
