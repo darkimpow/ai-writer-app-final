@@ -1,13 +1,13 @@
-import React, {useRef} from 'react';
-import {createClient} from '@supabase/supabase-js'
-import {supabase} from "../supabase";
+import React, {useState, useRef} from 'react';
+import {createClient} from '@supabase/supabase-js';
+
+const supabase = createClient("https://piimxdgpkeyvvzcraoqk.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml5dGp3dnprcm5ibHVyb2lneG96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzk5MzExODMsImV4cCI6MTk5NTUwNzE4M30.IDeBjr8nsgzAp24ZR7ceNtMbPqaPT1vlMtc-en-nVn8");
 
 function LandingPage() {
+    const [generatedText, setGeneratedText] = useState(null);
     const projectNameRef = useRef(null);
-    const languageRef = useRef(null);
     const productNameRef = useRef(null);
     const shortDescriptionRef = useRef(null);
-    const setGeneratedTextRef = useRef(null);
 
     const handleForm = async (e) => {
         e.preventDefault();
@@ -20,36 +20,33 @@ function LandingPage() {
                 Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
             },
             body: JSON.stringify({
-                prompt: `${projectNameRef.current.value}, ${productNameRef.current.value}, ${shortDescriptionRef.current.value}, ${languageRef.current.value}`,
+                prompt: `${projectNameRef.current.value}, ${productNameRef.current.value}, ${shortDescriptionRef.current.value}`,
             }),
         });
         const data = await response.json();
-        //data.choices[0].text is accessing the first object in the choices array (which should be the only object in the array),
+        // data.choices[0].text is accessing the first object in the choices array (which should be the only object in the array),
         // and then getting the text property of that object. This results in the generated text that was returned by the API call.
         const text = data.choices[0].text;
-        <div ref={setGeneratedTextRef}></div>
+        setGeneratedText(text);
 
         // Insert the generated text into your Supabase database
         const {data: insertedData, error} = await supabase
             .from("generated_text")
-            .insert([{
-                project_name: projectName,
-                language,
-                product_name: productName,
-                short_description,
-                generated_text: text
-            }]);
+            .insert([
+                {
+                    project_name: projectNameRef.current.value,
+                    product_name: productNameRef.current.value,
+                    short_description: shortDescriptionRef.current.value,
+                    generated_text: text,
+                },
+            ]);
 
         // Handle any errors
         if (error) {
             console.error(error);
             return;
         }
-
-
     };
-}
-
 
     return (
         <div className="flex justify-center items-center">
@@ -119,7 +116,7 @@ function LandingPage() {
                             <label className="label">
                                 <span className="label-text">Product Name *</span>
                             </label>
-                            <input type="text" placeholder="Write your product name"
+                            <input type="text" placeholder="Write your product name" ref={productNameRef}
                                    className="input input-bordered w-[400px] border-2"/>
                         </div>
 
@@ -128,7 +125,7 @@ function LandingPage() {
                             <label className="label">
                                 <span className="label-text">Short description *</span>
                             </label>
-                            <input type="text" placeholder="Write your project name"
+                            <input type="text" placeholder="Write your project name" ref={shortDescriptionRef}
                                    className="input input-bordered w-[400px] h-[200px] border-2"/>
                         </div>
                         <div className='pt-4 pl-2'>
