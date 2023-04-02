@@ -9,21 +9,16 @@ const DashboardPage = () => {
     const [loggedIn, setLoggedIn] = useState(true);
 
     const navigate = useNavigate();
-
-    {/*
-    useEffect(() => {
-
-        const checkUserLoggedIn = () => {
-            if (loggedIn) navigate('/dashboard/home');
-        };
-
-        //sends user to the Dashboard home page when logged in
-        checkUserLoggedIn();
-
-    }, [])
-    ;
-*/
-    }
+    // useEffect(() => {
+    //
+    //     const checkUserLoggedIn = () => {
+    //         if (loggedIn) navigate('/dashboard/home');
+    //     };
+    //
+    //     //sends user to the Dashboard home page when logged in
+    //     checkUserLoggedIn();
+    // }, [])
+    // ;
 
     return (
         <div>
