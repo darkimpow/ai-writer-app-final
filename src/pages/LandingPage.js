@@ -4,6 +4,9 @@ import {createClient} from '@supabase/supabase-js';
 const supabase = createClient("https://piimxdgpkeyvvzcraoqk.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml5dGp3dnprcm5ibHVyb2lneG96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzk5MzExODMsImV4cCI6MTk5NTUwNzE4M30.IDeBjr8nsgzAp24ZR7ceNtMbPqaPT1vlMtc-en-nVn8");
 
 function LandingPage() {
+    //Here, useState is a React hook used to declare a state variable called generatedText and its corresponding setter function setGeneratedText. The initial value of generatedText is set to null.
+    // useRef is another React hook used to create references to DOM elements. Here, projectNameRef, productNameRef, and shortDescriptionRef are created as references to
+    // input elements in the HTML markup of the LandingPage component. These references can be used to access and manipulate the input element values without using traditional DOM manipulation techniques.
     const [generatedText, setGeneratedText] = useState(null);
     const projectNameRef = useRef(null);
     const productNameRef = useRef(null);
@@ -29,7 +32,9 @@ function LandingPage() {
         const text = data.choices[0].text;
         setGeneratedText(text);
 
-        // Insert the generated text into your Supabase database
+        // Insert the generated text into your Supa_base database
+        //The code is creating an object with properties for the project name, product name, short description,
+        // and the generated text, and then using the Supa_base client to insert that object as a new row in the "generated_text" table.
         const {data: insertedData, error} = await supabase
             .from("generated_text")
             .insert([
