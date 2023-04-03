@@ -24,7 +24,7 @@ function LandingPage() {
         // Add the `choices` property to the `data` object
         data.choices = data.choices || [];
 
-        console.log(data.choices);
+        console.log(data.text);
 
         console.log('ended....');
 
