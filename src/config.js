@@ -1,8 +1,7 @@
-const config = {
-    API_KEY: "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"
-}
+import {createClient} from "@supabase/supabase-js";
 
-export default config;
-
-
+const supabase = createClient(
+    'https://piimxdgpkeyvvzcraoqk.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml5dGp3dnprcm5ibHVyb2lneG96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzk5MzExODMsImV4cCI6MTk5NTUwNzE4M30.IDeBjr8nsgzAp24ZR7ceNtMbPqaPT1vlMtc-en-nVn8',
+);
 
