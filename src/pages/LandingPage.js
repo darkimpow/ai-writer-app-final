@@ -16,16 +16,11 @@ function LandingPage() {
             'https://my.api.mockaroo.com/mock_ai_response.json?key=40be8000'
         );
 
-        // Add the `choices` property to the `data` object
-        data.choices = data.choices || [];
-
         console.log(data.text);
-
-        console.log('ended....');
+        const text = data.choices[0].text;
 
         // data.choices[0].text is accessing the first object in the choices array (which should be the only object in the array),
         // and then getting the text property of that object. This results in the generated text that was returned by the API call.
-        const text = data.choices[0]?.text || '';
 
         // Insert the generated text into your Supa_base database
         // The code is creating an object with properties for the project name, product name, short description,
@@ -34,7 +29,8 @@ function LandingPage() {
             .from('articles')
             .insert([
                 {
-                    prompt: shortDescriptionRef.current.value,
+                    title: projectNameRef.current.value,
+                    prompt: productNameRef.current.value,
                     content: text,
                     profile_id: 10,
                 },
