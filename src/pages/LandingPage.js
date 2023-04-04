@@ -1,7 +1,6 @@
 import React, {useState, useRef} from 'react';
 import axios from 'axios';
-import {supabase} from "../supabase";
-
+import supabase from "../config";
 
 function LandingPage() {
     const [generatedText, setGeneratedText] = useState(null);
@@ -32,12 +31,12 @@ function LandingPage() {
         // The code is creating an object with properties for the project name, product name, short description,
         // and the generated text, and then using the Supa_base client to insert that object as a new row in the "generated_text" table.
         const {data: formResults, error} = await supabase
-            .from('projects')
+            .from('articles')
             .insert([
                 {
-                    project_name: projectNameRef.current.value,
-                    product_name: productNameRef.current.value,
-                    short_description: shortDescriptionRef.current.value,
+                    prompt: shortDescriptionRef.current.value,
+                    content: text,
+                    profile_id: 10,
                 },
             ]);
 
