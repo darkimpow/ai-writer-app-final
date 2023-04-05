@@ -26,7 +26,7 @@ function LandingPage() {
         // and the generated text, and then using the Supa_base client to insert that object as a new row in the "generated_text" table.
 
 
-        const {data: generatedText, error} = await supabase
+        const response = await supabase
             .from('articles')
             .insert([
                 {
@@ -36,10 +36,10 @@ function LandingPage() {
                     profile_id: 10,
                 },
             ]);
-
+                console.log(response);
 // Handle any errors
-        if (error) {
-            console.error(error);
+        if (response.error) {
+            console.error(response.error);
             return;
         }
 
