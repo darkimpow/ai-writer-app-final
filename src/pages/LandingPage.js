@@ -18,14 +18,15 @@ function LandingPage() {
         );
 
         console.log(data.text);
-
         // data.choices[0].text is accessing the first object in the choices array (which should be the only object in the array),
         // and then getting the text property of that object. This results in the generated text that was returned by the API call.
 
         // Insert the generated text into your Supa_base database
         // The code is creating an object with properties for the project name, product name, short description,
         // and the generated text, and then using the Supa_base client to insert that object as a new row in the "generated_text" table.
-        const {data: formResults, error} = await supabase
+
+
+        const {data: generatedText, error} = await supabase
             .from('articles')
             .insert([
                 {
