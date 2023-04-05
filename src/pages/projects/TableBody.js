@@ -3,15 +3,17 @@ import TableHeader from "./TableHeader";
 import supabase from "../../config/supabase";
 
 export const TableBody = () => {
-    const [articles, setArticles] = useState([]);
+    const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        getArticles();
+        getProjects();
     }, []);
 
-    const getArticles = async () => {
-        const { data: articles, error } = await supabase
-            .from('articles')
+
+    const getProjects = async () => {
+
+        const { data: projects, error } = await supabase
+            .from('projects')
             .select('*')
             .filter('profile_id', 'eq', 10)
             .range(0, 19);
@@ -20,10 +22,12 @@ export const TableBody = () => {
             console.error(error);
             return;
         }
-
-        setArticles(articles);
+        console.log(projects)
+        setProjects(projects);
     };
-
+    function rand(){
+        return Math.floor(Math.random() * 15)+1
+    }
 
     return (
         <div className={'bg-[#faf9f9] w-full'}>
@@ -312,7 +316,7 @@ export const TableBody = () => {
                         </th>
                         <td>Difference Between UX and Ul Design</td>
                         <td className={'text-gray-400'}>Product Descriptions</td>
-                        <td>0</td>
+                        <td>1</td>
                         <td className={'text-gray-400'}>
                             <div>
                                 February 08, 2022
@@ -337,22 +341,22 @@ export const TableBody = () => {
 
 
                     {/* row 0 test */}
-                    {articles.map((article) => (
-                        <tr key={article.id}>
+                    {projects.map((project) => (
+                        <tr key={project.id}>
                             <th>
                                 <label>
                                     <input type="checkbox" className="checkbox checkbox-sm rounded" />
                                 </label>
                             </th>
-                            <td>{article.title}</td>
-                            <td className={'text-gray-400'}>{article.content}</td>
-                            <td>10</td>
+                            <td>{project.project_name}</td>
+                            <td className={'text-gray-400'}>{project.product_name}</td>
+                            <td>{rand()}</td>
                             <td className={'text-gray-400'}>
                                 <div>
-                                    February 28, 2022
+                                    {project.created_at.slice(0,10)}
                                 </div>
                                 <div>
-                                    10:25 AM
+                                    {project.created_at.slice(11,16)}
                                 </div>
                             </td>
                             <td className={'flex flex-row items-center justify-center'}>
