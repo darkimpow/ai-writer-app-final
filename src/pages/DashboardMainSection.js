@@ -19,19 +19,25 @@ const DashboardMainSection = () => {
             const {data: {user}} = await supabase.auth.getUser()
 
             setCurrentUser(user)
+            console.log(user)
             return user;
         }
 
         getUser()
 
     }, [])
-
     return (
         <div>
-            <p className="text-center text-3xl font-bold font-black pt-5">{ currentUser.app_metadata.fullName ? currentUser.app_metadata.fullName : 'User' },
-                So, what exactly did you have in
-                mind?</p>
-            <p className="text-center text-xl pt-1">Begin with selecting the content type from the options below.</p>
+            { currentUser &&
+                <>
+                    <p className="text-center text-3xl font-bold font-black pt-5">
+                        {currentUser.user_metadata.fullName ? currentUser.user_metadata.fullName : "User" }, So what exactly did you have in
+                        mind?</p>
+                    <p className="text-center text-xl pt-1">Begin with selecting the content type from the options below.</p>
+                </>
+
+            }
+
             <div className="flex justify-center items-center pt-5 ">
                 <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">All</button>
                 <button className="rounded-full bg-slate-200 py-2 px-6 mr-2">Article & Blog</button>

@@ -1,5 +1,16 @@
-const Navbar = () =>{
-    return(
+import {supabase} from "../config/supabase";
+import {useNavigate} from "react-router-dom";
+
+const Navbar = () => {
+    const navigate = useNavigate();
+    const handleLogout = async () => {
+
+        const {error} = await supabase.auth.signOut();
+
+        if (!error) navigate('/login')
+    }
+
+    return (
         <div className="navbar">
             <div className="flex-1 pl-3">
                 <a className="btn btn-ghost normal-case text-2xl text-purple-800 font-bold">TexoAi</a>
@@ -30,10 +41,12 @@ const Navbar = () =>{
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img src="https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/3902998/original/jjjj175745-min.jpg" />
+                            <img
+                                src="https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/3902998/original/jjjj175745-min.jpg"/>
                         </div>
                     </label>
-                    <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0}
+                        className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                         <li>
                             <a className="justify-between">
                                 Profile
@@ -41,7 +54,7 @@ const Navbar = () =>{
                             </a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><a onClick={handleLogout}>Logout</a></li>
                     </ul>
                 </div>
             </div>

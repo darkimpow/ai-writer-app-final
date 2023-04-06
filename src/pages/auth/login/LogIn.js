@@ -40,9 +40,10 @@ const LogIn = () => {
                 // check if there's something on the user
                 if (data.error && data.error.message !== '') {
                     setMessage(data.error.message)
-                }
-
-                navigate('/dashboard/home');
+                    console.log(data)
+                } else {
+                    navigate('/dashboard/home')
+                };
             })
 
     }
@@ -63,8 +64,9 @@ const LogIn = () => {
                                         <div className="alert alert-error shadow-lg">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                                     className="stroke-current flex-shrink-0 h-6 w-6 cursor-pointer" fill="none"
-                                                     viewBox="0 0 24 24" onClick={ ()=> setMessage(null)}>
+                                                     className="stroke-current flex-shrink-0 h-6 w-6 cursor-pointer"
+                                                     fill="none"
+                                                     viewBox="0 0 24 24" onClick={() => setMessage(null)}>
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                                           d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                                 </svg>
@@ -126,7 +128,8 @@ const LogIn = () => {
                             </div>
                             <div className="flex justify-center text-sm">
                                 <p className=" text-gray-400">Don't have an account? </p>
-                                <Link className="font-bold text-purple-600 cursor-pointer" to={'/signup'}> Sign up here</Link>
+                                <Link className="font-bold text-purple-600 cursor-pointer" to={'/signup'}> Sign up
+                                    here</Link>
                             </div>
 
                         </div>
