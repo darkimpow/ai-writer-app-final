@@ -1,43 +1,49 @@
-import React, {useRef,useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {Link} from "react-router-dom";
-import { supabase } from "../../config";
-import { useNavigate } from 'react-router-dom';
+import {supabase} from "../../config/supabase";
+import {useNavigate} from 'react-router-dom';
 
 const LogIn = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
-    const forgetPasswordRef= useRef();
-    const rememberMeRef= useRef();
-    const gmailMeRef= useRef();
+    const forgetPasswordRef = useRef();
+    const rememberMeRef = useRef();
+    const gmailMeRef = useRef();
     //
-    const [user, setUser] = useState();
+    const [message, setMessage] = useState(null);
     //
     const navigate = useNavigate();
-    //
+    //1
     const handleLogIn = async () => {
-        const {data} = await supabase.auth.signInWithPassword({
-            email: emailRef.current.value,
-            password: passwordRef.current.value,
-        });
-        // if(data.data.user) setUser(data)
-        if (data.user) {
-            setUser(data.user)
+        console.log(emailRef.current.value)
+        console.log(passwordRef.current.value)
 
-            return {data: data.data, error: data.error};
+        try {
+            const {data: {user}, error} = await supabase.auth.signInWithPassword({
+                email: emailRef.current.value,
+                password: passwordRef.current.value,
+            });
+
+            return {user, error};
+
+        } catch (e) {
+            console.error("Error: ", e)
         }
+
     }
 
-    const handleSubmit = (e)=> {
+    const handleSubmit = (e) => {
         e.preventDefault();
         handleLogIn()
-            .then((data)=> {
+            .then((data) => {
 
-            if(data.error) navigate('/signup');
+                // check if there's something on the user
+                if (data.error && data.error.message !== '') {
+                    setMessage(data.error.message)
+                }
 
-            navigate('/dashboard/home');
-
-
-        })
+                navigate('/dashboard/home');
+            })
 
     }
 
@@ -51,13 +57,29 @@ const LogIn = () => {
                         <div className="card-body ">
                             <div className="form-control">
                                 <div>
-                                    <h1 className="justify-left font-bold text-2xl" >Welcome Back</h1>
-
-                                    <h1 className="justify-left text-sm text-gray-400" >Have we meet before?</h1>
+                                    <h1 className="justify-left font-bold text-2xl">Welcome Back</h1>
+                                    {
+                                        message &&
+                                        <div className="alert alert-error shadow-lg">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     className="stroke-current flex-shrink-0 h-6 w-6 cursor-pointer" fill="none"
+                                                     viewBox="0 0 24 24" onClick={ ()=> setMessage(null)}>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                                          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                                <span>{message}</span>
+                                            </div>
+                                        </div>
+                                    }
+                                    <h1 className="justify-left text-sm text-gray-400">Have we meet before?</h1>
                                 </div>
                                 <br/>
-                                <button className=" flex justify-center text-black font-bold border-2 rounded-lg py-2 border-b-gray-300 gap-2" ref={gmailMeRef}>
-                                    <img className="w-6 h-6" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"/>
+                                <button
+                                    className=" flex justify-center text-black font-bold border-2 rounded-lg py-2 border-b-gray-300 gap-2"
+                                    ref={gmailMeRef}>
+                                    <img className="w-6 h-6"
+                                         src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"/>
                                     Sign in with Google
                                 </button>
                                 <div className="divider text-sm text-gray-400">Or continue with</div>
@@ -65,8 +87,10 @@ const LogIn = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Email*</span>
                                 </label>
-                                <div className="flex justify-between p-2  border border-gray-300 rounded-lg" >
-                                    <input placeholder="Enter your email" className="border-transparent rounded-lg outline-white border-solid border-2" ref={emailRef}/>
+                                <div className="flex justify-between p-2  border border-gray-300 rounded-lg">
+                                    <input placeholder="Enter your email"
+                                           className="border-transparent rounded-lg outline-white border-solid border-2"
+                                           ref={emailRef}/>
                                 </div>
 
                             </div>
@@ -75,28 +99,34 @@ const LogIn = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Password*</span>
                                 </label>
-                                <div className="flex justify-between p-2  border border-gray-300 rounded-lg" >
+                                <div className="flex justify-between p-2  border border-gray-300 rounded-lg">
 
 
-                                    <input type="password"  placeholder="Enter your password" className="border-transparent rounded-lg outline-white border-solid border-2" ref={passwordRef}/>
-                                    <span><img className="w-6 h-6 " src="https://cdn3.iconfinder.com/data/icons/modifiers-essential/48/v-19-512.png" /></span>
+                                    <input type="password" placeholder="Enter your password"
+                                           className="border-transparent rounded-lg outline-white border-solid border-2"
+                                           ref={passwordRef}/>
+                                    <span><img className="w-6 h-6 "
+                                               src="https://cdn3.iconfinder.com/data/icons/modifiers-essential/48/v-19-512.png"/></span>
                                 </div>
 
                                 <div className="justify-between flex mt-2">
                                     <div className="">
 
-                                        <input type="checkbox"  className="checkbox-xm" ref={rememberMeRef}/>
+                                        <input type="checkbox" className="checkbox-xm" ref={rememberMeRef}/>
                                         <span className="label-text text-gray-400">Remember me</span>
                                     </div>
-                                    <Link to={'/forgot-password'} className="text-sm text-warning" ref={forgetPasswordRef}>Forget your password?</Link>
+                                    <Link to={'/forgot-password'} className="text-sm text-warning"
+                                          ref={forgetPasswordRef}>Forget your password?</Link>
                                 </div>
                             </div>
                             <div className="form-control mt-2">
-                                <button type="submit" className="py-2 rounded-lg border-2 bg-purple-600 text-sm text-white">Sign in</button>
+                                <button type="submit"
+                                        className="py-2 rounded-lg border-2 bg-purple-600 text-sm text-white">Sign in
+                                </button>
                             </div>
-                            <div className="flex justify-center text-sm" >
-                                <h1 className=" text-gray-400" >Don't have an account?</h1>
-                                <a className="font-bold text-purple-600" >Sign here</a>
+                            <div className="flex justify-center text-sm">
+                                <h1 className=" text-gray-400">Don't have an account?</h1>
+                                <a className="font-bold text-purple-600">Sign here</a>
                             </div>
 
                         </div>
