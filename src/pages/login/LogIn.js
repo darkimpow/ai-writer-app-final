@@ -1,7 +1,7 @@
-import React, {useRef} from 'react';
+import React, {useRef,useState} from 'react';
 import {Link} from "react-router-dom";
-
-
+import { supabase } from "../../config";
+import { useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
     const emailRef = useRef();
@@ -9,19 +9,41 @@ const LogIn = () => {
     const forgetPasswordRef= useRef();
     const rememberMeRef= useRef();
     const gmailMeRef= useRef();
+    //
+    const [user, setUser] = useState();
+    //
+    const navigate = useNavigate();
+    //
+    const handleLogIn = async () => {
+        const {data} = await supabase.auth.signInWithPassword({
+            email: emailRef.current.value,
+            password: passwordRef.current.value,
+        });
+        // if(data.data.user) setUser(data)
+        if (data.user) {
+            setUser(data.user)
 
-    const handleLogin=(e)=>{
+            return {data: data.data, error: data.error};
+        }
+    }
+
+    const handleSubmit = (e)=> {
         e.preventDefault();
-        console.log(emailRef.current.value);
-        console.log(passwordRef.current.value);
-        console.log(forgetPasswordRef.current.value);
-        console.log(rememberMeRef.current.value);
-        console.log(gmailMeRef.current.value);
+        handleLogIn()
+            .then((data)=> {
+
+            if(data.error) navigate('/signup');
+
+            navigate('/dashboard/home');
+
+
+        })
+
     }
 
     return (
         <div>
-            <form onSubmit={handleLogin} className="hero min-h-screen bg-base-200">
+            <form onSubmit={handleSubmit} className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
 
                     <div className="card flex-shrink-0 mx-20 w-full max-w-sm shadow-2xl bg-base-100 m-4">
@@ -56,7 +78,7 @@ const LogIn = () => {
                                 <div className="flex justify-between p-2  border border-gray-300 rounded-lg" >
 
 
-                                    <input  placeholder="Enter your password" className="border-transparent rounded-lg outline-white border-solid border-2" ref={passwordRef}/>
+                                    <input type="password"  placeholder="Enter your password" className="border-transparent rounded-lg outline-white border-solid border-2" ref={passwordRef}/>
                                     <span><img className="w-6 h-6 " src="https://cdn3.iconfinder.com/data/icons/modifiers-essential/48/v-19-512.png" /></span>
                                 </div>
 
