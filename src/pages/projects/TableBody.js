@@ -376,6 +376,7 @@ export const TableBody = () => {
                         </td>
                     </tr>
 
+{/*Dynamic display from db*/}
 
                     {/* row 0 test */}
                     {projects.map((project) => (
