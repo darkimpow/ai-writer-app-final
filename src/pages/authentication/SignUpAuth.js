@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import {supabase} from '/supabaseClient';
+import {supabase} from 'src/config/supabaseClient';
 import {useNavigate} from "react-router-dom";
-// import data from "bootstrap/js/src/dom/data";
+
 
 
 const SignUpAuth = () => {
@@ -37,15 +37,6 @@ const SignUpAuth = () => {
 
         return { data: response.data, error: response.error };
     };
-        // const signUpEmailPassword = async () => {
-        //     let { data, error } = await supabase.auth.signInWithPassword({
-        //         email: 'example@email.com',
-        //         password: 'example-password',
-        //     })
-        //         return {data, error}
-        //     console.log('almost done');
-        //
-        //     };
 
      const signUpEmailPassword = async () => {
          console.log('almost done');
