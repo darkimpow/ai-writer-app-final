@@ -4,12 +4,20 @@ Our team has been hired to build an app for marketers,  with the focus on a desk
  
 This project will be bootstrapped with Tailwind.CSS, GitHub will be used for source control, project management will  use GitHub and ZenHub, the prototype will be done on Figma, the  frontend will use React and the backend will use Supabase.
 
+## Getting Started
+
+- Clone this repository, `git@github.com:msimbo/ai-writer-app.git`
+- Create a `.env.local` file in the root of your pforject and add the following:
+```dotenv
+REACT_APP_SUPABASE_URL="https://iytjwvzkrnbluroigxoz.supabase.co"
+REACT_APP_SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml5dGp3dnprcm5ibHVyb2lneG96Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3OTkzMTE4MywiZXhwIjoxOTk1NTA3MTgzfQ.nUuCybkc4-2z-PcBSszgMNoRmtG1BAKfXpnKfxa2b5I"
+```
+- Run `yarn`
+- Start `yarn start`
+
 ---
 
-### All project section (@AmirhosseinOlyaei)
-Create a web page called "All Projects" using the React.js framework, to display a list of all generated projects in a visually appealing and easy-to-navigate manner. It will provide users with a clear and concise overview of all projects, allowing them to easily find and select the project they are working on.
-
-Issue #51
-
----
-
+### Credentials 
+#### Test user
+- test@msimbo.com
+- user123

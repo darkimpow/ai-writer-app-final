@@ -10,13 +10,6 @@ import SignUpPage from "./pages/Signup Page/SignUpPage";
 import {AllProjects} from "./pages/projects/AllProjects";
 
 
-
-
-
-
-
-
-
 function App() {
 
     return (
