@@ -5,11 +5,31 @@ import {faGoogle} from '@fortawesome/free-brands-svg-icons'
 import {faSpaceAwesome} from '@fortawesome/free-brands-svg-icons'
 import {faDeezer} from '@fortawesome/free-brands-svg-icons'
 import {faDyalog} from '@fortawesome/free-brands-svg-icons'
+import {useEffect, useState} from "react";
+import {supabase} from "../config/supabase";
 
 const DashboardMainSection = () => {
+
+    const [currentUser, setCurrentUser] = useState(null)
+
+    useEffect(() => {
+
+        const getUser = async () => {
+            // get a logged in user
+            const {data: {user}} = await supabase.auth.getUser()
+
+            setCurrentUser(user)
+            return user;
+        }
+
+        getUser()
+
+    }, [])
+
     return (
         <div>
-            <p className="text-center text-3xl font-bold font-black pt-5">Mahfuzul, So, what exactly did you have in
+            <p className="text-center text-3xl font-bold font-black pt-5">{ currentUser.app_metadata.fullName ? currentUser.app_metadata.fullName : 'User' },
+                So, what exactly did you have in
                 mind?</p>
             <p className="text-center text-xl pt-1">Begin with selecting the content type from the options below.</p>
             <div className="flex justify-center items-center pt-5 ">
