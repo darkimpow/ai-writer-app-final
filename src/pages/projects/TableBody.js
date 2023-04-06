@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TableHeader from "./TableHeader";
-import supabase from "../../config/supabase";
+import {supabase} from "../../config/supabase";
 
 export const TableBody = () => {
     const [projects, setProjects] = useState([]);
