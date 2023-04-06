@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import {Link} from "react-router-dom";
-import {supabase} from "../../config/supabase";
+import {supabase} from "../../../config/supabase";
 import {useNavigate} from 'react-router-dom';
 
 const LogIn = () => {

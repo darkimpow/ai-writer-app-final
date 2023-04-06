@@ -1,12 +1,6 @@
 import React, {useRef} from 'react';
 
-import GoogleButton from "../../component/GoogleButton";
-
-
-
-
-
-
+import GoogleButton from "../../../component/GoogleButton";
 
 const SignUpPage = () => {
     const fullNameRef = useRef();

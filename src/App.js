@@ -2,11 +2,11 @@ import {Route, Routes} from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import DashboardMainSection from "./pages/DashboardMainSection";
-import LogIn from "./pages/login/LogIn";
-import NewPassword from "./pages/login/NewPassword";
-import PasswordSuccess from "./pages/login/PasswordSuccess";
-import ForgotPassword from "./pages/login/ForgotPassword";
-import SignUpPage from "./pages/Signup Page/SignUpPage";
+import LogIn from "./pages/auth/login/LogIn";
+import NewPassword from "./pages/auth/login/NewPassword";
+import PasswordSuccess from "./pages/auth/login/PasswordSuccess";
+import ForgotPassword from "./pages/auth/login/ForgotPassword";
+import SignUpPage from "./pages/auth/login/SignUpPage";
 import {AllProjects} from "./pages/projects/AllProjects";
 
 
@@ -20,8 +20,6 @@ function App() {
             <Route path={'/new-password'} element={<NewPassword/>}/>
             <Route path={'/password-success'} element={<PasswordSuccess/>}/>
             <Route path={'/forgot-password'} element={<ForgotPassword/>}/>
-
-
 
             <Route path={'/signup'} element={<SignUpPage/>}/>
             <Route path={'/dashboard/projects'} element={<AllProjects/>}/>
