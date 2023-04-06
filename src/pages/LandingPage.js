@@ -3,11 +3,14 @@ import axios from 'axios';
 import { supabase } from '../config/supabase';
 
 function LandingPage() {
+
     const [generatedText, setGeneratedText] = useState(null);
     const projectNameRef = useRef(null);
     const productNameRef = useRef(null);
     const shortDescriptionRef = useRef(null);
     const [currentProfile, setCurrentProfile] = useState(null);
+    const [errorMsg, setErrorMsg] = useState('');
+
 
 
     useEffect(() => {
