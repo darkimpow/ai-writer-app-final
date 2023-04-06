@@ -9,22 +9,29 @@ function LandingPage() {
     const shortDescriptionRef = useRef(null);
     const [currentProfile, setCurrentProfile] = useState(null);
 
+
     useEffect(() => {
-        const getProfile = async () => {
+        const getUser = async () => {
             const { data: { user }} = await supabase.auth.getUser()
+            console.log(user);
 
             setCurrentProfile(user);
             console.log(user);
             return user;
         }
+        getUser()
     }, [])
 
     const handleForm = async (e) => {
         e.preventDefault();
 
+
+
+
         // Call the OpenAI API to generate the response based on the form data
         const { data } = await axios.get(
             'https://my.api.mockaroo.com/mock_ai_response.json?key=40be8000'
+
         );
 
         console.log(data.text);
@@ -57,6 +64,9 @@ function LandingPage() {
 
             <div className='pb-[550px]'>
 
+                {errorMsg && (
+                    <div className="text-red-600 mb-2">{errorMsg}</div>
+                )}
 
                 <button
                     className=" border-2 rounded-lg font-bold text-purple-800 text-2xl bg-purple-200 border-purple-800 flex inline mr-4 pr-1">
@@ -92,7 +102,8 @@ function LandingPage() {
                 {/* This form will need a submit function inserted here*/}
 
                 <form onSubmit={handleForm}>
-                    <div className="w-[600px] h-[550px] bg-white shadow-2xl rounded-lg  pl-32">
+                <div className="pt-5 pb-8">
+                    <div className="w-[600px] h-[550px]  bg-white shadow-2xl rounded-lg  pl-32">
                         <div className="form-control w-full max-w-xs flex flex-col">
                             <label className="label">
                                 <span className="label-text">Project Name *</span>
@@ -141,7 +152,9 @@ function LandingPage() {
                             </button>
                         </div>
                     </div>
+                </div>
                 </form>
+
             </div>
         </div>
     );
