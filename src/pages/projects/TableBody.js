@@ -11,10 +11,10 @@ export const TableBody = () => {
 
 
     const getProjects = async () => {
-        // if (!currentUser) {
-        //     // user is not logged in, do nothing
-        //     return;
-        // }
+        if (!currentUser) {
+            // user is not logged in, do nothing
+            return;
+        }
 
         const { data: projects, error } = await supabase
             .from('projects')
