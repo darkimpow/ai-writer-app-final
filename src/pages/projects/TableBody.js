@@ -11,11 +11,15 @@ export const TableBody = () => {
 
 
     const getProjects = async () => {
+        // if (!currentUser) {
+        //     // user is not logged in, do nothing
+        //     return;
+        // }
 
         const { data: projects, error } = await supabase
             .from('projects')
             .select('*')
-            .filter('profile_id', 'eq', 10)
+            .filter('profile_id', 'eq', currentUser.id)
             .range(0, 19);
 
         if (error) {
@@ -28,6 +32,39 @@ export const TableBody = () => {
     function rand(){
         return Math.floor(Math.random() * 15)+1
     }
+
+
+    // auth
+    const [currentUser, setCurrentUser] = useState(null)
+
+    useEffect(() => {
+        const getUser = async () => {
+            // get a logged in user
+            const { data: user, error } = await supabase.auth.user();
+
+            if (error) {
+                console.error(error);
+                return;
+            }
+
+            setCurrentUser(user);
+            console.log(user);
+            return user;
+        };
+
+        getUser();
+
+        // subscribe to auth state changes
+        const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+            setCurrentUser(session?.user ?? null);
+        });
+
+        // cleanup function to unsubscribe from the auth listener
+        return () => {
+            authListener.unsubscribe();
+        };
+    }, []);
+
 
     return (
         <div className={'bg-[#faf9f9] w-full'}>
