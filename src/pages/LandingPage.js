@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import axios from 'axios';
-import supabase from "../config";
+import {supabase} from "../config/supabase";
 
 function LandingPage() {
     const [generatedText, setGeneratedText] = useState(null);
