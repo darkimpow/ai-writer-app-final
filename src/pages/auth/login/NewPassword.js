@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {ResendEmail} from '../../component/ResendEmail'
+import {ResendEmail} from '../../../component/ResendEmail'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLockOpen} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
