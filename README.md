@@ -6,18 +6,18 @@ This project will be bootstrapped with Tailwind.CSS, GitHub will be used for sou
 
 ## Getting Started
 
-- Clone repository
-- Run `yarn`
-- Start `yarn sta`
-
-## Getting Started
-
-- Clone repository
+- Clone this repository, `git@github.com:msimbo/ai-writer-app.git`
+- Create a `.env.local` file in the root of your pforject and add the following:
+```dotenv
+REACT_APP_SUPABASE_URL="https://iytjwvzkrnbluroigxoz.supabase.co"
+REACT_APP_SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml5dGp3dnprcm5ibHVyb2lneG96Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3OTkzMTE4MywiZXhwIjoxOTk1NTA3MTgzfQ.nUuCybkc4-2z-PcBSszgMNoRmtG1BAKfXpnKfxa2b5I"
+```
 - Run `yarn`
 - Start `yarn start`
+
 ---
 
-### Credentials
+### Credentials 
 #### Test user
 - test@msimbo.com
 - user123
