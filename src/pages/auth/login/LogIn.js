@@ -125,8 +125,8 @@ const LogIn = () => {
                                 </button>
                             </div>
                             <div className="flex justify-center text-sm">
-                                <h1 className=" text-gray-400">Don't have an account?</h1>
-                                <a className="font-bold text-purple-600">Sign here</a>
+                                <p className=" text-gray-400">Don't have an account? </p>
+                                <Link className="font-bold text-purple-600 cursor-pointer" to={'/signup'}> Sign up here</Link>
                             </div>
 
                         </div>

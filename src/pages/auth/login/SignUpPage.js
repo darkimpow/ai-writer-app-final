@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 
 import GoogleButton from "../../../component/GoogleButton";
+import {Link} from "react-router-dom";
 
 const SignUpPage = () => {
     const fullNameRef = useRef();
@@ -66,7 +67,7 @@ const SignUpPage = () => {
 
                                     <div className="form-control mt-6">
                                  <button className="btn btn-primary bg-purple-600"> Sign Up </button>
-                                <p className='text-xs'> Already have an account? <strong> Sign In </strong></p>
+                                <p className='text-xs'> Already have an account? <strong> <Link to={'/login'}>Sign In</Link>  </strong></p>
                             </div>
                         </form>
                         </div>
