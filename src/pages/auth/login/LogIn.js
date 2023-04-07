@@ -91,7 +91,7 @@ const LogIn = () => {
                                 </label>
                                 <div className="flex justify-between p-2  border border-gray-300 rounded-lg">
                                     <input placeholder="Enter your email"
-                                           className="border-transparent rounded-lg outline-white border-solid border-2"
+                                           className="w-full p-2 border-transparent rounded-lg outline-none border-solid border-2"
                                            ref={emailRef}/>
                                 </div>
 
@@ -105,7 +105,7 @@ const LogIn = () => {
 
 
                                     <input type="password" placeholder="Enter your password"
-                                           className="border-transparent rounded-lg outline-white border-solid border-2"
+                                           className="w-full p-2 border-transparent rounded-lg outline-none border-solid border-2"
                                            ref={passwordRef}/>
                                     <span><img className="w-6 h-6 "
                                                src="https://cdn3.iconfinder.com/data/icons/modifiers-essential/48/v-19-512.png"/></span>

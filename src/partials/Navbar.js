@@ -42,7 +42,7 @@ const Navbar = () => {
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             <img
-                                src="https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/3902998/original/jjjj175745-min.jpg"/>
+                                src="https://api.dicebear.com/6.x/open-peeps/svg?flip=false"/>
                         </div>
                     </label>
                     <ul tabIndex={0}
