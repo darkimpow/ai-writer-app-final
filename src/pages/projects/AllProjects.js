@@ -8,9 +8,9 @@ export const AllProjects = () => {
 
     return (
         <div className=''>
-            <Navbar/>
+            {/*<Navbar/>*/}
             <TableBody/>
-            <Footer/>
+            {/*<Footer/>*/}
         </div>
     );
 };

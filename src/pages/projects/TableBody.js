@@ -5,21 +5,66 @@ import {supabase} from "../../config/supabase";
 export const TableBody = () => {
     const [projects, setProjects] = useState([]);
 
+    // auth
+    const [currentUser, setCurrentUser] = useState(null)
+
     useEffect(() => {
         getProjects();
     }, []);
 
+    useEffect(() => {
+        const getUser = async () => {
+            // get a logged in user
+            // const { data: user, error } = await supabase.auth.user();
+            const { data: { user }, error } = await supabase.auth.getUser();
+
+            if (error) {
+                console.error(error.message);
+                return;
+            }
+
+            setCurrentUser(user);
+            // console.log(user);
+            return user;
+
+        };
+
+        getUser();
+
+        // subscribe to auth state changes
+        // const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+        //     setCurrentUser(session?.user ?? null);
+        // });
+        //
+        // // cleanup function to unsubscribe from the auth listener
+        // return () => {
+        //     authListener.unsubscribe();
+        // };
+    }, []);
+
+    // console.log(currentUser)
+    // console.log(currentUser)
+    // console.log(currentUser?.id)
+    /**
+     *
+     * @returns {Promise<void>}
+     *
+     * SELECT * FROM projects WHERE user_id = '6130c052-bdfe-41d3-b6da-c847d7e10406'
+     *
+     * SELECT id, email FROM auth.users where id = '6130c052-bdfe-41d3-b6da-c847d7e10406'
+     */
 
     const getProjects = async () => {
         if (!currentUser) {
             // user is not logged in, do nothing
             return;
         }
-
+        console.log(currentUser)
         const { data: projects, error } = await supabase
             .from('projects')
             .select('*')
-            .filter('profile_id', 'eq', currentUser.id)
+            // user_id, eq, currentUser
+            .filter('user_id', 'eq', currentUser?.id)
             .range(0, 19);
 
         if (error) {
@@ -34,41 +79,11 @@ export const TableBody = () => {
     }
 
 
-    // auth
-    const [currentUser, setCurrentUser] = useState(null)
-
-    useEffect(() => {
-        const getUser = async () => {
-            // get a logged in user
-            const { data: user, error } = await supabase.auth.user();
-
-            if (error) {
-                console.error(error);
-                return;
-            }
-
-            setCurrentUser(user);
-            console.log(user);
-            return user;
-        };
-
-        getUser();
-
-        // subscribe to auth state changes
-        const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
-            setCurrentUser(session?.user ?? null);
-        });
-
-        // cleanup function to unsubscribe from the auth listener
-        return () => {
-            authListener.unsubscribe();
-        };
-    }, []);
 
 
     return (
         <div className={'bg-[#faf9f9] w-full'}>
-<div className={'invisible'}>0</div>
+            <div className={'invisible'}>0</div>
             {/*title - search - filter*/}
             <TableHeader />
 
