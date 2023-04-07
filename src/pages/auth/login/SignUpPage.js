@@ -112,7 +112,7 @@ const SignUpPage = () => {
 
                             <h3>Password*</h3>
                             <div className="flex input input-bordered">
-                                <input className='outline-none' ref={passwordRef} type='text'
+                                <input className='w-full outline-none ' ref={passwordRef} type='password'
                                        placeholder=' Create password'/>
                                 <div className='hero-content flex-col lg:flex-row-reverse'>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -125,7 +125,7 @@ const SignUpPage = () => {
 
                             <h3>Re-Password*</h3>
                             <div className=" flex input input-bordered">
-                                <input className='outline-none' ref={rePasswordRef} type='text'
+                                <input className='outline-none' ref={rePasswordRef} type='password'
                                        placeholder=' Confirm password'/>
                                 <div className='hero-content flex-col lg:flex-row-reverse'>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

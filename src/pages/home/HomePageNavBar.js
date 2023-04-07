@@ -22,7 +22,7 @@ const HomePageNavBar = () => {
                     <button>
                         <Link
                             className="btn btn-ghost normal-case font-bold text-indigo-300 text-xl"
-                            to={'/auth'}>Sign In</Link>
+                            to={'/login'}>Sign In</Link>
 
                     </button>
                     <button className="btn btn-ghost ">
