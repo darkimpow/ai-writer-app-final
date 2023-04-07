@@ -2,7 +2,7 @@ import React from 'react';
 
 function TableHeader() {
     return (
-        <div className={'bg-white w-10/12 mx-auto mt-3'}>
+        <div className={'bg-white w-10/12 mx-auto'}>
             {/*title*/}
             <div className={'pl-4 pt-4 font-bold'}>List of Projects</div>
 

@@ -20,13 +20,14 @@ const DashboardMainSection = () => {
             const {data: {user}} = await supabase.auth.getUser()
 
             setCurrentUser(user)
-            console.log(user)
+            // console.log(user)
             return user;
         }
 
         getUser()
 
     }, [])
+
     return (
         <div>
             { currentUser &&
