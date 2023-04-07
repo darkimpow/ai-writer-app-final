@@ -1,0 +1,15 @@
+# curl "https://api.nlpcloud.io/v1/gpu/fast-gpt-j/article-generation"
+#  -H "Authorization: Token <token>"
+#  -H "Content-Type: application/json"
+#  -X POST -d '{"title":"How to become a programmer?"}'
+POST https://api.nlpcloud.io/v1/gpu/fast-gpt-j/article-generation
+Authorization: Token 48a2859518e3f905bafa00dc3a4a848560d1148b
+Content-Type: application/json
+
+{
+  "title": "How to become a programmer?"
+}
+
+###
+
+
