@@ -23,9 +23,6 @@ function App() {
             <Route path={'/forgot-password'} element={<ForgotPassword/>}/>
 
             <Route path={'/signup'} element={<SignUpPage/>}/>
-            <Route path={'/dashboard/projects'} element={<AllProjects/>}/>
-
-
 
             {/* Start: Dashboard Routes */}
             <Route path={'/dashboard'} element={<DashboardPage/>}>
