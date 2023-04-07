@@ -8,6 +8,7 @@ import PasswordSuccess from "./pages/auth/login/PasswordSuccess";
 import ForgotPassword from "./pages/auth/login/ForgotPassword";
 import SignUpPage from "./pages/auth/login/SignUpPage";
 import {AllProjects} from "./pages/projects/AllProjects";
+import LandingPage from "./pages/LandingPage";
 
 
 function App() {
@@ -22,11 +23,12 @@ function App() {
             <Route path={'/forgot-password'} element={<ForgotPassword/>}/>
 
             <Route path={'/signup'} element={<SignUpPage/>}/>
-            <Route path={'/dashboard/projects'} element={<AllProjects/>}/>
 
             {/* Start: Dashboard Routes */}
             <Route path={'/dashboard'} element={<DashboardPage/>}>
                 <Route path={'/dashboard/home'} element={<DashboardMainSection/>}/>
+                <Route path={'/dashboard/projects'} element={<AllProjects/>}/>
+                <Route path={'/dashboard/create-project'} element={<LandingPage/>}/>
             </Route>
             {/* End: Dashboard Routes*/}
         </Routes>
