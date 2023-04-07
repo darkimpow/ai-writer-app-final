@@ -19,7 +19,7 @@ export const TableBody = () => {
         const { data: projects, error } = await supabase
             .from('projects')
             .select('*')
-            .filter('profile_id', 'eq', currentUser.id)
+            .filter('profile_id', 'eq', 'user_id')
             .range(0, 19);
 
         if (error) {
@@ -40,7 +40,8 @@ export const TableBody = () => {
     useEffect(() => {
         const getUser = async () => {
             // get a logged in user
-            const { data: user, error } = await supabase.auth.user();
+            // const { data: user, error } = await supabase.auth.user();
+            const { data: { user }, error } = await supabase.auth.getUser();
 
             if (error) {
                 console.error(error);
