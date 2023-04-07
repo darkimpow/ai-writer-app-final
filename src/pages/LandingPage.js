@@ -50,7 +50,7 @@ function LandingPage() {
                 title: projectNameRef.current.value,
                 prompt: productNameRef.current.value,
                 content: data.text,
-                profile_id: currentProfile?.id,
+                user_id: currentProfile.id,
             },
         ]);
         if (insertError) {
