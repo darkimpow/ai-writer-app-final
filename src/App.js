@@ -30,6 +30,7 @@ function App() {
             {/* Start: Dashboard Routes */}
             <Route path={'/dashboard'} element={<DashboardPage/>}>
                 <Route path={'/dashboard/home'} element={<DashboardMainSection/>}/>
+                <Route path={'/dashboard/projects'} element={<AllProjects/>}/>
                 <Route path={'/dashboard/create-project'} element={<LandingPage/>}/>
             </Route>
             {/* End: Dashboard Routes*/}
